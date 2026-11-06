@@ -25,7 +25,7 @@ After pushing changes to GitHub:
 2. Open **Pull or Deploy** and click **Update from Remote**. Wait for it to finish.
 3. Click **Deploy HEAD Commit**.
 
-cPanel runs `.cpanel.yml` to copy `index.html`, `assets/`, `css/`, and `js/` into
+cPanel runs `.cpanel.yml` to copy `index.html`, `assets/`, `client_logo/`, `css/`, and `js/` into
 the document root. Repository metadata and this README are not published.
 Existing files with matching names are overwritten; unrelated server files and
 files removed from Git remain in place.
