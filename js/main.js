@@ -35,7 +35,7 @@ $(document).ready(function () {
       line3: 'SOLUTIONS',
       bg: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=2070&auto=format&fit=crop',
       ctaText: 'OUR STRATEGY',
-      ctaLink: '#business-platforms'
+      ctaLink: '#countries-showcase'
     },
     {
       id: '04',
@@ -44,7 +44,7 @@ $(document).ready(function () {
       line3: 'VALUE',
       bg: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
       ctaText: 'VIEW PORTFOLIO',
-      ctaLink: '#business-platforms'
+      ctaLink: '#countries-showcase'
     }
   ];
 
@@ -167,7 +167,6 @@ $(document).ready(function () {
       $('.countries-intro-text').text('نحن نركز على الجانب التجاري، ونوظف رأس المال عبر محفظتنا في قطاعات ومناطق جغرافية واعدة.');
       $('.know-more-btn').text('اعرف المزيد');
       $('.countries-sub-caption').text('شركات واستثمارات في أكثر من 80 دولة');
-      $('.platform-vertical-text').text('منصات الأعمال');
     } else {
       $(this).text('عربي');
       $('html').attr('dir', 'ltr').attr('lang', 'en');
@@ -176,7 +175,6 @@ $(document).ready(function () {
       $('.countries-intro-text').text('We are commercially-focused, deploying capital across our portfolio in promising sectors and geographies.');
       $('.know-more-btn').text('KNOW MORE');
       $('.countries-sub-caption').text('Businesses and investments in more than 80 countries');
-      $('.platform-vertical-text').text('BUSINESS PLATFORMS');
     }
   });
 
@@ -219,37 +217,6 @@ $(document).ready(function () {
   $('#footerSubscribe').on('submit', function (e) {
     e.preventDefault();
     $('#footerSubscribeStatus').text('Newsletter signup is currently unavailable. Please try again later.');
-  });
-
-  // ------------------------------------------------------------------
-  // 9. Business Platforms Accordion & Image Switcher
-  // ------------------------------------------------------------------
-  $('.platform-accordion-header').on('click', function () {
-    const $item = $(this).closest('.platform-accordion-item');
-    const $body = $item.find('.platform-accordion-body');
-    const newImg = $item.data('img');
-
-    if ($item.hasClass('active')) {
-      $body.slideUp(250);
-      $item.removeClass('active');
-    } else {
-      // Collapse currently active item
-      $('.platform-accordion-item.active')
-        .removeClass('active')
-        .find('.platform-accordion-body')
-        .slideUp(250);
-
-      // Expand clicked item
-      $item.addClass('active');
-      $body.slideDown(250);
-
-      // Smoothly crossfade image on the left
-      if (newImg) {
-        $('#platformArchImg').fadeTo(180, 0.4, function () {
-          $(this).attr('src', newImg).fadeTo(220, 1);
-        });
-      }
-    }
   });
 
 });
