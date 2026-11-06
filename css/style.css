@@ -1,0 +1,1327 @@
+:root {
+  --brand-teal: #00b4b6;
+  --brand-teal-hover: #00999b;
+  --brand-dark: #0a0f18;
+  --brand-darker: #060910;
+  --brand-card-bg: #121926;
+  --brand-card-border: #1e293b;
+  --brand-text-muted: #94a3b8;
+  --brand-gold: #c59b27;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', 'Jost', sans-serif;
+  overflow-x: hidden;
+  background-color: var(--brand-dark);
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+/* ========================================================
+   1. HERO SECTION & HEADER
+   ======================================================== */
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(
+      to bottom,
+      rgba(10, 16, 26, 0.25) 0%,
+      rgba(120, 70, 70, 0.15) 40%,
+      rgba(15, 20, 30, 0.5) 80%,
+      rgba(10, 15, 24, 0.95) 100%
+    ),
+    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop') center center / cover no-repeat;
+  transition: background-image 0.6s ease-in-out;
+}
+
+.hero-header {
+  padding: 2.2rem 3.5rem;
+  z-index: 30;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.brand-logo svg {
+  width: 48px;
+  height: 38px;
+  fill: none;
+  stroke: var(--brand-teal);
+  stroke-width: 1.6;
+}
+
+.brand-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.45rem;
+  letter-spacing: 0.38em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 2px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.lang-pill-btn {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: none;
+  padding: 0.35rem 1.3rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lang-pill-btn:hover {
+  background-color: #f0f0f0;
+  color: #000000;
+  transform: translateY(-1px);
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.45rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.08);
+}
+
+.menu-hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  width: 42px;
+  height: 28px;
+  padding: 0;
+}
+
+.menu-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2.2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-hamburger:hover span {
+  background-color: var(--brand-teal);
+}
+
+/* Hero Title */
+.hero-content {
+  padding: 0 3.5rem;
+  margin-top: auto;
+  margin-bottom: 5.5rem;
+  z-index: 20;
+}
+
+.hero-title {
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+}
+
+.hero-title .line-1 {
+  display: block;
+  font-weight: 700;
+  font-size: clamp(3.2rem, 8.2vw, 8rem);
+  color: #ffffff;
+}
+
+.hero-title .line-2 {
+  display: block;
+  font-weight: 200;
+  font-size: clamp(3.2rem, 8.2vw, 8rem);
+  color: #ffffff;
+  letter-spacing: 0.01em;
+}
+
+.hero-title .line-3-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.hero-title .line-3 {
+  font-weight: 100;
+  font-size: clamp(3.2rem, 8.2vw, 8rem);
+  color: #ffffff;
+  letter-spacing: 0.03em;
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 9999px;
+  padding: 0.85rem 2.5rem;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.explore-btn:hover {
+  background: #ffffff;
+  color: #0b0f19;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Hero Footer Controls */
+.hero-footer {
+  padding: 1.8rem 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 30;
+}
+
+.slider-indicators {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.slide-number {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.slide-progress-line {
+  width: 44px;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-progress-line .progress-bar-inner {
+  height: 100%;
+  width: 25%;
+  background: var(--brand-teal);
+  transition: width 0.4s ease;
+}
+
+.slide-dot {
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.slide-dot:hover,
+.slide-dot.active {
+  background-color: #ffffff;
+  transform: scale(1.5);
+}
+
+.accessibility-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  background-color: var(--brand-teal);
+  color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 14px rgba(0, 180, 182, 0.45);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accessibility-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+.accessibility-btn:hover {
+  background-color: var(--brand-teal-hover);
+  transform: scale(1.1);
+}
+
+/* ========================================================
+   2. SEARCH & MENU OVERLAYS
+   ======================================================== */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: rgba(10, 15, 25, 0.98);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  padding: 0 3.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--brand-teal);
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: 10px 0;
+  outline: none;
+}
+
+.search-close-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 9, 16, 0.98);
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 6rem;
+}
+
+.menu-overlay .close-menu-btn {
+  position: absolute;
+  top: 2.5rem;
+  right: 3.5rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.menu-nav-links a {
+  color: #ffffff;
+  font-size: clamp(2rem, 3.8vw, 3.5rem);
+  font-weight: 300;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.menu-nav-links a:hover {
+  color: var(--brand-teal);
+  transform: translateX(14px);
+}
+
+/* ========================================================
+   2. WHO WE ARE - AUM HERO METRIC SECTION (White Canvas)
+   ======================================================== */
+.aum-showcase-section {
+  background-color: #ffffff;
+  color: #111827;
+  padding: 7rem 0 6rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.aum-intro-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.6rem, 2.4vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.38;
+  color: #111827;
+  max-width: 460px;
+  letter-spacing: -0.01em;
+}
+
+.aum-metrics-block {
+  padding-left: 2rem;
+}
+
+/* Stylized UAE Dirham Sign */
+.dirham-symbol-container {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.dirham-symbol-container svg {
+  width: 58px;
+  height: 58px;
+}
+
+/* Giant 1414 BN with Video/Photo Clipping Mask */
+.aum-big-number-wrap {
+  display: flex;
+  align-items: flex-start;
+  line-height: 0.88;
+  margin-bottom: 1.6rem;
+}
+
+.aum-clipped-text {
+  font-family: 'Outfit', 'Jost', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  /* Photo clipping mask effect as seen on live Mubadala site */
+  background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop') center center / cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.aum-num-value {
+  font-size: clamp(6.5rem, 14vw, 13.5rem);
+}
+
+.aum-num-unit {
+  font-size: clamp(3.2rem, 6.8vw, 6.6rem);
+  font-weight: 800;
+  margin-left: 0.6rem;
+  margin-top: 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.aum-sub-caption {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.01em;
+}
+
+.aum-usd-value {
+  font-family: 'Outfit', 'Jost', sans-serif;
+  font-size: clamp(3.2rem, 7.5vw, 6.8rem);
+  font-weight: 100;
+  color: #111827;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .aum-showcase-section {
+    padding: 4.5rem 0;
+  }
+  .aum-metrics-block {
+    padding-left: 0;
+    margin-top: 3.5rem;
+  }
+}
+
+/* ========================================================
+   2B. GLOBAL REACH - 80+ COUNTRIES SECTION (Matches Screenshot)
+   ======================================================== */
+.countries-showcase-section {
+  background-color: #ffffff;
+  color: #111827;
+  padding: 6.5rem 0 7rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.countries-intro-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.6rem, 2.4vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.38;
+  color: #111827;
+  max-width: 460px;
+  letter-spacing: -0.01em;
+  margin-bottom: 2.2rem;
+}
+
+/* Teal Pill Button */
+.know-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--brand-teal);
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.85rem 2.6rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 180, 182, 0.25);
+}
+
+.know-more-btn:hover {
+  background-color: var(--brand-teal-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 180, 182, 0.4);
+}
+
+.countries-metrics-block {
+  padding-left: 2rem;
+}
+
+/* Giant 80+ with Server Room / Data Center Mask */
+.countries-big-number-wrap {
+  display: flex;
+  align-items: flex-start;
+  line-height: 0.85;
+  margin-bottom: 1.2rem;
+}
+
+.countries-clipped-80 {
+  font-family: 'Outfit', 'Jost', sans-serif;
+  font-size: clamp(7.5rem, 16vw, 16rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  /* Server infrastructure data center photo mask matching screenshot */
+  background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop') center center / cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.countries-plus-sign {
+  font-family: 'Outfit', 'Jost', sans-serif;
+  font-size: clamp(4.5rem, 9.5vw, 9.5rem);
+  font-weight: 300;
+  color: #b0b8c4;
+  margin-left: 0.4rem;
+  margin-top: -0.2rem;
+  line-height: 1;
+}
+
+.countries-sub-caption {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 991px) {
+  .countries-showcase-section {
+    padding: 4.5rem 0;
+  }
+  .countries-metrics-block {
+    padding-left: 0;
+    margin-top: 3.5rem;
+  }
+}
+
+/* ========================================================
+   2C. BUSINESS PLATFORMS ACCORDION SECTION (Matches Screenshot)
+   ======================================================== */
+.business-platforms-section {
+  background-color: #f7f9fb;
+  color: #111827;
+  padding: 7.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.platform-sidebar-tag-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding-right: 1.5rem;
+}
+
+.platform-vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #111827;
+}
+
+.platform-vertical-line {
+  width: 1.5px;
+  height: 52px;
+  background-color: #111827;
+}
+
+/* Visual Image Composition Frame */
+.platform-composite-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-arch-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 540px;
+  background-color: #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.platform-arch-card img.bg-arch-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Overlaid Wind Turbine SVG / Asset */
+.turbine-overlay-svg {
+  position: absolute;
+  top: -45px;
+  bottom: -45px;
+  left: 32%;
+  width: 260px;
+  height: calc(100% + 90px);
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.22));
+}
+
+/* Accordion Column */
+.platform-accordion-list {
+  border-top: 1px solid #e2e8f0;
+}
+
+.platform-accordion-item {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.platform-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.3rem 0;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.platform-accordion-header:hover .platform-title {
+  color: var(--brand-teal);
+}
+
+.platform-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  transition: color 0.25s ease;
+}
+
+.platform-plus-icon {
+  font-size: 1.85rem;
+  font-weight: 200;
+  color: #94a3b8;
+  line-height: 1;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.platform-accordion-item.active .platform-title {
+  color: var(--brand-teal);
+}
+
+.platform-accordion-item.active .platform-plus-icon {
+  transform: rotate(45deg);
+  color: var(--brand-teal);
+}
+
+.platform-accordion-body {
+  display: none;
+  padding-bottom: 2rem;
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 620px;
+}
+
+.platform-accordion-body a.platform-link {
+  color: var(--brand-teal);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1rem;
+}
+
+.platform-accordion-body a.platform-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .business-platforms-section {
+    padding: 4.5rem 0;
+  }
+  .platform-composite-wrap {
+    margin-bottom: 3.5rem;
+  }
+  .platform-arch-card {
+    height: 420px;
+  }
+  .platform-accordion-header {
+    padding: 1.6rem 0;
+  }
+}
+
+/* ========================================================
+   3. CORPORATE OVERVIEW / STATS SECTION
+   ======================================================== */
+.section-padding {
+  padding: 6.5rem 0;
+}
+
+.eyebrow-tag {
+  color: var(--brand-teal);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading strong {
+  font-weight: 700;
+}
+
+.section-desc {
+  color: var(--brand-text-muted);
+  font-size: 1.12rem;
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.stat-card {
+  background: var(--brand-card-bg);
+  border: 1px solid var(--brand-card-border);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--brand-teal);
+}
+
+.stat-value {
+  font-size: clamp(2.8rem, 4vw, 3.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.stat-value span {
+  color: var(--brand-teal);
+}
+
+.stat-label {
+  color: var(--brand-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* ========================================================
+   4. INVESTMENT SECTORS SECTION
+   ======================================================== */
+.sector-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.sector-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 15, 24, 0.1) 0%,
+    rgba(10, 15, 24, 0.7) 60%,
+    rgba(8, 12, 20, 0.95) 100%
+  );
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.sector-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+
+.sector-card:hover .sector-bg-img {
+  transform: scale(1.08);
+}
+
+.sector-card:hover {
+  transform: translateY(-6px);
+}
+
+.sector-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.sector-num {
+  font-size: 0.85rem;
+  color: var(--brand-teal);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.sector-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.sector-snippet {
+  font-size: 0.88rem;
+  color: var(--brand-text-muted);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.sector-link-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sector-link-text i {
+  transition: transform 0.2s ease;
+}
+
+.sector-card:hover .sector-link-text i {
+  transform: translateX(5px);
+  color: var(--brand-teal);
+}
+
+/* ========================================================
+   5. SUSTAINABILITY & IMPACT BANNER
+   ======================================================== */
+.impact-banner {
+  background: linear-gradient(135deg, #0e1726 0%, #08111e 100%);
+  border-top: 1px solid var(--brand-card-border);
+  border-bottom: 1px solid var(--brand-card-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-badge {
+  background: rgba(0, 180, 182, 0.12);
+  border: 1px solid rgba(0, 180, 182, 0.3);
+  color: var(--brand-teal);
+  padding: 0.4rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================================
+   6. THE EXCHANGE / MULTIMEDIA INSIGHTS
+   ======================================================== */
+.media-card {
+  background: var(--brand-card-bg);
+  border: 1px solid var(--brand-card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 180, 182, 0.5);
+}
+
+.media-thumb {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.media-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.media-card:hover .media-thumb img {
+  transform: scale(1.05);
+}
+
+.media-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(10, 15, 24, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.media-body {
+  padding: 1.8rem;
+}
+
+.media-date {
+  font-size: 0.8rem;
+  color: var(--brand-text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.media-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.media-link {
+  color: var(--brand-teal);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.media-link:hover {
+  text-decoration: underline;
+}
+
+/* Partner logo wall */
+.partners-section {
+  background: #f8f9fb;
+  color: #080b52;
+  padding: 108px 0 130px;
+}
+
+.partners-container {
+  width: min(90%, 1160px);
+  margin-inline: auto;
+}
+
+.partners-section h2 {
+  margin: 0 0 64px;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+  align-items: center;
+  gap: 54px 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.partners-logo {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* Offset the six-logo second row so it stays centered below the first seven. */
+.partners-logo:nth-child(8) { grid-column: 2 / span 2; }
+
+.partners-logo svg {
+  display: block;
+  width: 130px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 13 / 9;
+  overflow: hidden;
+}
+
+@media (max-width: 991px) {
+  .partners-section { padding: 80px 0 90px; }
+  .partners-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 20px; }
+  .partners-logo, .partners-logo:nth-child(8) { grid-column: auto; }
+}
+
+@media (max-width: 575px) {
+  .partners-section { padding: 64px 0 72px; }
+  .partners-section h2 { margin-bottom: 40px; }
+  .partners-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 12px; }
+}
+
+/* ========================================================
+   7. GLOBAL FOOTER
+   ======================================================== */
+.site-footer {
+  background: #087bb9;
+  color: #fff;
+  padding: clamp(48px, 4vw, 76px) 0 24px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1800px;
+  margin-inline: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr 1.08fr 1.18fr 1.95fr;
+  gap: clamp(24px, 2.5vw, 48px);
+  align-items: start;
+}
+
+.footer-col-title,
+.footer-feature-link,
+.footer-prominent-links a {
+  font-size: clamp(22px, 1.6vw, 30px);
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.footer-col-title { margin: 0 0 32px; }
+
+.footer-links,
+.footer-prominent-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li + li { margin-top: 14px; }
+
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a {
+  font-size: clamp(16px, 1.15vw, 21px);
+  line-height: 1.45;
+}
+
+.site-footer a:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+.site-footer a:focus-visible,
+.site-footer input:focus-visible,
+.site-footer button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+
+.footer-feature-link { display: inline-block; margin-top: 40px; }
+.footer-prominent-links li + li { margin-top: 24px; }
+.footer-legal-links { margin-top: 84px; }
+
+.footer-connect {
+  border-inline-start: 1px solid rgba(255, 255, 255, 0.3);
+  padding-inline-start: clamp(28px, 5.7vw, 108px);
+  min-width: 0;
+  min-height: 465px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer-social-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 28px;
+  min-height: 44px;
+  font-size: clamp(23px, 1.7vw, 32px);
+  transition: opacity 0.2s ease;
+}
+
+.footer-social-links a:hover { opacity: 0.75; }
+.footer-subscribe { margin-top: 48px; }
+
+.footer-subscribe-field {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  height: 60px;
+}
+
+.footer-subscribe input {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  padding: 0 20px;
+  font: inherit;
+  font-size: 16px;
+}
+
+.footer-subscribe input::placeholder { color: rgba(255, 255, 255, 0.85); opacity: 1; }
+
+.footer-subscribe button {
+  flex: 0 0 68px;
+  border: 0;
+  border-inline-start: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.footer-subscribe button:hover { background: rgba(255, 255, 255, 0.12); }
+.footer-subscribe-status { font-size: 14px; margin: 12px 0 0; }
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 80px;
+}
+
+.footer-logo svg { width: 100px; height: 74px; stroke-width: 1.6; }
+.footer-logo span { font-size: 26px; font-weight: 600; letter-spacing: 0.15em; }
+
+.footer-bottom { margin-top: 80px; text-align: center; }
+.footer-copyright { margin: 0; font-size: clamp(14px, 1.1vw, 20px); font-weight: 300; }
+
+@media (max-width: 1199px) {
+  .footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 28px; }
+  .footer-connect {
+    grid-column: 1 / -1;
+    border-inline-start: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 32px 0 0;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) auto;
+    align-items: center;
+    gap: 32px;
+  }
+  .footer-subscribe { margin: 0; }
+  .footer-logo { padding: 0; margin: 0; }
+  .footer-logo svg { width: 76px; height: 56px; }
+  .footer-logo span { font-size: 20px; }
+  .footer-legal-links { margin-top: 56px; }
+  .footer-bottom { margin-top: 48px; }
+}
+
+@media (max-width: 767px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; }
+  .footer-col-title { margin-bottom: 24px; }
+  .footer-feature-link { margin-top: 28px; }
+  .footer-connect { display: flex; gap: 28px; align-items: stretch; }
+  .footer-social-links { justify-content: flex-start; gap: clamp(16px, 5vw, 32px); }
+  .footer-subscribe { width: 100%; max-width: 460px; }
+  .footer-subscribe input { padding-inline: 12px; font-size: 14px; }
+  .footer-subscribe button { flex-basis: 54px; }
+  .footer-logo { padding-top: 12px; }
+  .footer-bottom { margin-top: 40px; }
+}
+
+/* Global Offices Grid in Footer */
+.offices-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.office-item {
+  flex: 1 1 140px;
+}
+
+.office-city {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.office-region {
+  font-size: 0.8rem;
+  color: var(--brand-text-muted);
+}
+
+/* ========================================================
+   8. RESPONSIVE BREAKPOINTS
+   ======================================================== */
+@media (max-width: 991px) {
+  .hero-header {
+    padding: 1.8rem 2rem;
+  }
+  .hero-content {
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+  }
+  .hero-footer {
+    padding: 1.5rem 2rem;
+  }
+  .menu-overlay {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-header {
+    padding: 1.2rem 1.5rem;
+  }
+  .hero-content {
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .hero-footer {
+    padding: 1.2rem 1.5rem;
+  }
+  .brand-name {
+    font-size: 1.1rem;
+    letter-spacing: 0.25em;
+  }
+  .brand-logo svg {
+    width: 36px;
+    height: 28px;
+  }
+  .nav-actions {
+    gap: 1.2rem;
+  }
+  .section-padding {
+    padding: 4.5rem 0;
+  }
+}

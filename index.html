@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mubadala Investment Company | Sovereign Investor</title>
+
+  <!-- Google Fonts: Jost & Outfit for hairline through extra-bold weights -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Dedicated Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========================================================
+       FULLSCREEN NAVIGATION OVERLAY
+       ======================================================== -->
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close Menu">
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="menu-nav-links d-flex flex-column">
+            <a href="#aum-showcase">Who We Are</a>
+            <a href="#business-platforms">What We Do</a>
+            <a href="#countries-showcase">Global Footprint</a>
+            <a href="#partners">Who We Work With</a>
+            <a href="#footer">Contact Us</a>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-flex flex-column justify-content-end text-start border-start border-secondary ps-5">
+          <p class="text-uppercase tracking-wider text-muted small fw-bold">Headquarters</p>
+          <h5 class="fw-semibold text-white mb-2">Abu Dhabi, UAE</h5>
+          <p class="text-muted small mb-4">Al Maryah Island, Abu Dhabi Global Market Square</p>
+          <div class="social-links">
+            <a href="#" class="social-pill" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-pill" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-pill" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-pill" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEARCH OVERLAY
+       ======================================================== -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="container d-flex align-items-center">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search insights, portfolio companies, reports..." />
+      <button class="search-close-btn" id="closeSearchBtn" aria-label="Close Search">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       HERO BANNER SECTION (Matches Uploaded Screenshot)
+       ======================================================== -->
+  <section class="hero-container">
+
+    <!-- Header Navigation -->
+    <header class="hero-header d-flex justify-content-between align-items-center">
+      <!-- Logo -->
+      <a href="#" class="brand-logo">
+        <svg viewBox="0 0 54 40" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="27" cy="20" rx="20" ry="15" transform="rotate(-15 27 20)" stroke="currentColor" fill="none" />
+          <ellipse cx="27" cy="20" rx="23" ry="11" transform="rotate(35 27 20)" stroke="currentColor" fill="none" />
+          <ellipse cx="27" cy="20" rx="21" ry="8" transform="rotate(75 27 20)" stroke="currentColor" fill="none" />
+          <circle cx="45" cy="18" r="1.5" fill="currentColor" />
+        </svg>
+        <span class="brand-name">MUBADALA</span>
+      </a>
+
+      <!-- Right Header Actions -->
+      <div class="nav-actions">
+        <!-- Arabic Language Switcher Button -->
+        <a href="#" class="lang-pill-btn" id="langSwitch">عربي</a>
+
+        <!-- Search Button -->
+        <button class="search-btn" id="searchBtn" aria-label="Open Search">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- 2-bar Hamburger Menu Button -->
+        <button class="menu-hamburger" id="hamburgerBtn" aria-label="Open Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Hero Title Statement -->
+    <main class="hero-content">
+      <div class="hero-title">
+        <span class="line-1">BOLD MOVES</span>
+        <span class="line-2">THAT SHAPE</span>
+        <div class="line-3-wrapper">
+          <span class="line-3">THE FUTURE</span>
+          <a href="#aum-showcase" class="explore-btn">EXPLORE MORE</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bottom Slider Navigation & Accessibility -->
+    <footer class="hero-footer">
+      <div class="slider-indicators">
+        <span class="slide-number" id="slideIndex">01</span>
+        <div class="slide-progress-line">
+          <div class="progress-bar-inner"></div>
+        </div>
+        <span class="slide-dot active" data-slide="01"></span>
+        <span class="slide-dot" data-slide="02"></span>
+        <span class="slide-dot" data-slide="03"></span>
+        <span class="slide-dot" data-slide="04"></span>
+      </div>
+
+      <!-- Floating Accessibility Button -->
+      <button class="accessibility-btn" id="accessibilityBtn" title="Accessibility Tools" aria-label="Accessibility Tools">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="4" r="2" />
+          <path d="M19 13v-2c-1.54.02-3.09-.75-4.07-1.83l-1.29-1.43c-.39-.42-.94-.66-1.51-.66-.6 0-1.15.26-1.55.71l-1.2 1.35C8.36 10.22 6.74 11 5 11v2c2.14 0 4.09-.97 5.38-2.52L11 16v6h2v-6l.62-5.52C14.91 12.03 16.86 13 19 13z"/>
+        </svg>
+      </button>
+    </footer>
+
+  </section>
+
+  <!-- ========================================================
+       SECTION: WHO WE ARE - AUM SHOWCASE (Matches Screenshot)
+       ======================================================== -->
+  <section id="aum-showcase" class="aum-showcase-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Column: Mission Statement -->
+        <div class="col-lg-5">
+          <p class="aum-intro-text">
+            Mubadala is a sovereign investor managing a diverse portfolio of assets in the UAE and abroad.
+          </p>
+        </div>
+
+        <!-- Right Column: AUM Numbers with Image Clipping Mask -->
+        <div class="col-lg-7">
+          <div class="aum-metrics-block">
+            <!-- UAE Dirham Symbol -->
+            <div class="dirham-symbol-container" title="UAE Dirham (AED)">
+              <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- D outline -->
+                <path d="M14 6h14c8.28 0 15 6.72 15 15s-6.72 15-15 15H14V6z" stroke="#87a2d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Double horizontal bar crossing through the glyph -->
+                <line x1="4" y1="18" x2="34" y2="18" stroke="#87a2d4" stroke-width="2.6" stroke-linecap="round"/>
+                <line x1="4" y1="26" x2="34" y2="26" stroke="#87a2d4" stroke-width="2.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+
+            <!-- Giant 1414 BN with Video/Photo Texture Mask -->
+            <div class="aum-big-number-wrap">
+              <span class="aum-clipped-text aum-num-value">1414</span>
+              <span class="aum-clipped-text aum-num-unit">BN</span>
+            </div>
+
+            <!-- Assets under management label -->
+            <p class="aum-sub-caption">Assets under management</p>
+
+            <!-- Secondary USD 385 BN in hairline typography -->
+            <div class="aum-usd-value">USD 385 BN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION: GLOBAL REACH - 80+ COUNTRIES (Matches Screenshot)
+       ======================================================== -->
+  <section id="countries-showcase" class="countries-showcase-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Column: Commercially-focused statement & CTA -->
+        <div class="col-lg-5">
+          <p class="countries-intro-text">
+            We are commercially-focused, deploying capital across our portfolio in promising sectors and geographies.
+          </p>
+          <a href="#business-platforms" class="know-more-btn">KNOW MORE</a>
+        </div>
+
+        <!-- Right Column: 80+ with Server Infrastructure Photo Mask -->
+        <div class="col-lg-7">
+          <div class="countries-metrics-block">
+            <div class="countries-big-number-wrap">
+              <span class="countries-clipped-80">80</span>
+              <span class="countries-plus-sign">+</span>
+            </div>
+            <p class="countries-sub-caption">Businesses and investments in more than 80 countries</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION: BUSINESS PLATFORMS ACCORDION (Matches Screenshot)
+       ======================================================== -->
+  <section id="business-platforms" class="business-platforms-section">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <!-- Left Column: Vertical Tag & Architecture / Turbine Visual -->
+        <div class="col-lg-6">
+          <div class="d-flex align-items-center">
+            <!-- Vertical Section Indicator -->
+            <div class="platform-sidebar-tag-wrap d-none d-sm-flex">
+              <span class="platform-vertical-text">BUSINESS PLATFORMS</span>
+              <div class="platform-vertical-line"></div>
+            </div>
+
+            <!-- Architectural Image with Overlaid Wind Turbine -->
+            <div class="platform-composite-wrap flex-grow-1">
+              <div class="platform-arch-card">
+                <!-- Modern Curved Glass Architecture Photo -->
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?q=80&w=1200&auto=format&fit=crop" class="bg-arch-img" id="platformArchImg" alt="Modern Architecture Platform" />
+                
+                <!-- Wind Turbine Vector Asset overlapping canvas -->
+                <svg class="turbine-overlay-svg" viewBox="0 0 200 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Turbine Tower -->
+                  <polygon points="97,200 103,200 108,480 92,480" fill="#d9e2ec" />
+                  <!-- Nacelle / Rotor Hub -->
+                  <rect x="88" y="185" width="24" height="18" rx="3" fill="#bcccdc" stroke="#9fb3c8" stroke-width="1.5" />
+                  <rect x="91" y="187" width="10" height="4" fill="#e12d39" />
+                  <circle cx="100" cy="194" r="7" fill="#829ab1" />
+                  <!-- Upper Blade -->
+                  <path d="M100 194 Q97 90 99 15 Q102 90 100 194" fill="#f0f4f8" stroke="#cbd5e1" stroke-width="1.2" />
+                  <!-- Lower Right Blade -->
+                  <path d="M100 194 Q155 240 215 285 Q145 250 100 194" fill="#f0f4f8" stroke="#cbd5e1" stroke-width="1.2" />
+                  <!-- Lower Left Blade -->
+                  <path d="M100 194 Q45 240 -15 285 Q55 250 100 194" fill="#f0f4f8" stroke="#cbd5e1" stroke-width="1.2" />
+                  <!-- Red Warning Tip Dots -->
+                  <circle cx="99.5" cy="40" r="1.5" fill="#e12d39" />
+                  <circle cx="99.5" cy="70" r="1.5" fill="#e12d39" />
+                  <circle cx="160" cy="242" r="1.5" fill="#e12d39" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Accordion List -->
+        <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
+          <div class="platform-accordion-list" id="platformAccordion">
+
+            <!-- Item 1: Private Equity -->
+            <div class="platform-accordion-item active" data-img="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?q=80&w=1200&auto=format&fit=crop">
+              <div class="platform-accordion-header">
+                <h3 class="platform-title">PRIVATE EQUITY</h3>
+                <span class="platform-plus-icon">+</span>
+              </div>
+              <div class="platform-accordion-body" style="display: block;">
+                <p>Deploying flexible, long-term capital into category-defining companies globally across technology, life sciences, healthcare, consumer, and financial services.</p>
+                <a href="#business-platforms" class="platform-link">Explore Private Equity Portfolio <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Item 2: UAE Investments -->
+            <div class="platform-accordion-item" data-img="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1200&auto=format&fit=crop">
+              <div class="platform-accordion-header">
+                <h3 class="platform-title">UAE INVESTMENTS</h3>
+                <span class="platform-plus-icon">+</span>
+              </div>
+              <div class="platform-accordion-body">
+                <p>Accelerating the transformation of the UAE's economy by cultivating world-class industrial champions, advanced aerospace, clean energy clusters, and sustainable national enterprises.</p>
+                <a href="#business-platforms" class="platform-link">Explore UAE Investments <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Item 3: Credit and Special Situations -->
+            <div class="platform-accordion-item" data-img="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop">
+              <div class="platform-accordion-header">
+                <h3 class="platform-title">CREDIT AND SPECIAL SITUATIONS</h3>
+                <span class="platform-plus-icon">+</span>
+              </div>
+              <div class="platform-accordion-body">
+                <p>Investing across private credit, opportunistic debt, structured financing, and syndicated loan markets to capture risk-adjusted returns across market cycles.</p>
+                <a href="#business-platforms" class="platform-link">Explore Credit Strategies <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Item 4: Real Assets -->
+            <div class="platform-accordion-item" data-img="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop">
+              <div class="platform-accordion-header">
+                <h3 class="platform-title">REAL ASSETS</h3>
+                <span class="platform-plus-icon">+</span>
+              </div>
+              <div class="platform-accordion-body">
+                <p>Investing in essential digital infrastructure, renewable power, transportation logistics, utilities, and commercial real estate that underpin modern global economies.</p>
+                <a href="#business-platforms" class="platform-link">Explore Real Assets <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner logos supplied in the design reference. -->
+  <section id="partners" class="partners-section" aria-labelledby="partners-heading">
+    <div class="partners-container">
+      <h2 id="partners-heading">Who We Work With</h2>
+      <ul class="partners-grid" aria-label="Our partners">
+          <li class="partners-logo">
+            <svg viewBox="190 220 130 90" role="img" aria-label="YLINE" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="339 220 130 90" role="img" aria-label="K2" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="507 220 130 90" role="img" aria-label="Prime Residencies" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="674 220 130 90" role="img" aria-label="Victoria Golf Resort" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="839 220 130 90" role="img" aria-label="Partner logo 5" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="1003 220 130 90" role="img" aria-label="Ranweli" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="1159 220 130 90" role="img" aria-label="Partner logo 7" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="269 366 130 90" role="img" aria-label="Shore to Shore" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="437 366 130 90" role="img" aria-label="MAS" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="604 366 130 90" role="img" aria-label="Hirdaramani" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="770 366 130 90" role="img" aria-label="Partner logo 11" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="936 366 130 90" role="img" aria-label="GHR" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+          <li class="partners-logo">
+            <svg viewBox="1104 366 130 90" role="img" aria-label="K Zone" xmlns="http://www.w3.org/2000/svg">
+              <image href="assets/partner-logos-reference.png" width="1456" height="670" />
+            </svg>
+          </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECTION 7: COMPLETE COMPREHENSIVE FOOTER
+       ======================================================== -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <nav class="footer-column" aria-labelledby="footer-business">
+          <h2 id="footer-business" class="footer-col-title">Business</h2>
+          <ul class="footer-links">
+            <li><a href="#business-platforms">Technology &amp; AI</a></li>
+            <li><a href="#business-platforms">Clean Energy</a></li>
+            <li><a href="#business-platforms">Life Sciences</a></li>
+            <li><a href="#business-platforms">Real Assets</a></li>
+            <li><a href="#business-platforms">Private Equity</a></li>
+            <li><a href="#business-platforms">Credit &amp; Special Situations</a></li>
+            <li><a href="#business-platforms">Infrastructure</a></li>
+            <li><a href="#business-platforms">Real Estate</a></li>
+            <li><a href="#countries-showcase">Global Investments</a></li>
+            <li><a href="#business-platforms">Investment Sectors</a></li>
+          </ul>
+          <a href="#business-platforms" class="footer-feature-link">Explore our portfolio</a>
+        </nav>
+
+        <nav class="footer-column" aria-labelledby="footer-community">
+          <h2 id="footer-community" class="footer-col-title">Community</h2>
+          <ul class="footer-links">
+            <li><a href="#">Responsible Investing</a></li>
+            <li><a href="#">Community Programs</a></li>
+            <li><a href="#">ESG Reporting</a></li>
+            <li><a href="#">Environment</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-column" aria-labelledby="footer-about">
+          <h2 id="footer-about" class="footer-col-title">About</h2>
+          <ul class="footer-links">
+            <li><a href="#aum-showcase">Mubadala</a></li>
+            <li><a href="#aum-showcase">Overview &amp; History</a></li>
+            <li><a href="#aum-showcase">Leadership &amp; Board</a></li>
+            <li><a href="#aum-showcase">Governance</a></li>
+            <li><a href="#aum-showcase">Financial Strength</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Insights &amp; Innovation</a></li>
+            <li><a href="#countries-showcase">Global Offices</a></li>
+            <li><a href="#aum-showcase">Investor Relations</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-column footer-utility" aria-label="News, careers and policies">
+          <ul class="footer-prominent-links">
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+          <ul class="footer-prominent-links footer-legal-links">
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Fraud Alert</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-connect">
+          <div class="footer-social-links" aria-label="Social media">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Contact us"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+          </div>
+          <form class="footer-subscribe" id="footerSubscribe">
+            <label class="visually-hidden" for="footerEmail">Email address for newsletter updates</label>
+            <div class="footer-subscribe-field">
+              <input id="footerEmail" name="email" type="email" autocomplete="email" placeholder="Enter your email ID to subscribe" required />
+              <button type="submit" aria-label="Subscribe to newsletter"><i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <p class="footer-subscribe-status" id="footerSubscribeStatus" role="status"></p>
+          </form>
+          <a href="#" class="footer-logo" aria-label="Mubadala home">
+            <svg viewBox="0 0 54 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <ellipse cx="27" cy="20" rx="20" ry="15" transform="rotate(-15 27 20)" stroke="currentColor" fill="none" />
+              <ellipse cx="27" cy="20" rx="23" ry="11" transform="rotate(35 27 20)" stroke="currentColor" fill="none" />
+              <ellipse cx="27" cy="20" rx="21" ry="8" transform="rotate(75 27 20)" stroke="currentColor" fill="none" />
+              <circle cx="45" cy="18" r="1.5" fill="currentColor" />
+            </svg>
+            <span>MUBADALA</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Mubadala Investment Company PJSC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       SCRIPTS: jQuery 3.7.1, Bootstrap 5 Bundle, Custom JS
+       ======================================================== -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Dedicated jQuery & Custom JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
