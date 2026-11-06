@@ -17,7 +17,7 @@ $(document).ready(function () {
       line3: 'THE FUTURE',
       bg: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop',
       ctaText: 'EXPLORE MORE',
-      ctaLink: '#aum-showcase'
+      ctaLink: '#countries-showcase'
     },
     {
       id: '02',
@@ -162,16 +162,12 @@ $(document).ready(function () {
     if (currentText === 'عربي') {
       $(this).text('EN');
       $('html').attr('dir', 'rtl').attr('lang', 'ar');
-      $('.aum-intro-text').text('مبادلة هي شركة استثمار سيادي تدير محفظة متنوعة من الأصول في دولة الإمارات وخارجها.');
-      $('.aum-sub-caption').text('الأصول المدارة');
       $('.countries-intro-text').text('نحن نركز على الجانب التجاري، ونوظف رأس المال عبر محفظتنا في قطاعات ومناطق جغرافية واعدة.');
       $('.know-more-btn').text('اعرف المزيد');
       $('.countries-sub-caption').text('شركات واستثمارات في أكثر من 80 دولة');
     } else {
       $(this).text('عربي');
       $('html').attr('dir', 'ltr').attr('lang', 'en');
-      $('.aum-intro-text').text('Mubadala is a sovereign investor managing a diverse portfolio of assets in the UAE and abroad.');
-      $('.aum-sub-caption').text('Assets under management');
       $('.countries-intro-text').text('We are commercially-focused, deploying capital across our portfolio in promising sectors and geographies.');
       $('.know-more-btn').text('KNOW MORE');
       $('.countries-sub-caption').text('Businesses and investments in more than 80 countries');
