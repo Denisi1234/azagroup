@@ -1,13 +1,13 @@
 /**
- * Aza Group Website Interaction Scripts
- * Powered by jQuery 3.7.1
+ * Aza Group - Corporate Calmness & Subtle Interactions
+ * Engineered for clean, deliberate brand poise (like Tata / luxury industrial conglomerates)
  */
 
 $(document).ready(function () {
   'use strict';
 
   // ------------------------------------------------------------------
-  // 1. Hero Carousel Slide Configuration
+  // 1. Hero Carousel Slide Configuration (Deliberate & Smooth)
   // ------------------------------------------------------------------
   const slides = [
     {
@@ -25,7 +25,8 @@ $(document).ready(function () {
       line2: 'MADE',
       line3: 'EASIER',
       linkText: 'Visit Aza Akaunting',
-      linkHref: 'https://www.azakaunting.com'
+      linkHref: 'https://www.azakaunting.com',
+      bg: 'assert/banner/aza_banner_akaunting.jpg'
     },
     {
       id: '03',
@@ -46,52 +47,53 @@ $(document).ready(function () {
     currentSlideIndex = index;
     const slide = slides[index];
 
-    // Update active dot
+    // Update active dot with calm visual feedback
     $('.slide-dot').removeClass('active').removeAttr('aria-current');
     $(`.slide-dot[data-slide="${slide.id}"]`).addClass('active').attr('aria-current', 'true');
 
     // Update slide number indicator
     $('#slideIndex').text(slide.id);
 
-    // Update progress line inner width
+    // Update progress line smoothly
     const progressPercent = ((index + 1) / slides.length) * 100;
     $('.progress-bar-inner').css('width', `${progressPercent}%`);
 
-    // Fade transition for titles and background
+    // Calm fade transition without snappy visual jumps
     const $heroContainer = $('.hero-container');
     const $heroTitle = $('.hero-title');
+    const $exploreBtn = $('.explore-btn');
 
-    $heroTitle.stop(true, true).fadeTo(180, 0.2, function () {
+    $heroTitle.add($exploreBtn).stop(true, true).fadeTo(400, 0.15, function () {
       $('.line-1').text(slide.line1);
       $('.line-2').text(slide.line2);
       $('.line-3').text(slide.line3);
-      $('.explore-btn').attr('href', slide.linkHref).text(slide.linkText);
-      $heroTitle.fadeTo(220, 1);
+      $exploreBtn.attr('href', slide.linkHref).text(slide.linkText);
+      $heroTitle.add($exploreBtn).fadeTo(500, 1);
     });
 
-    // Update background image
-    const backgroundImage = slide.bg
-      ? `url("${new URL(slide.bg, document.baseURI).href}")`
-      : 'none';
-    $heroContainer.css('--hero-image', backgroundImage);
+    // Update background image smoothly
+    if (slide.bg) {
+      const bgUrl = `url("${new URL(slide.bg, document.baseURI).href}")`;
+      $heroContainer.css('--hero-image', bgUrl);
+    }
   }
 
   // Handle dot clicks
   $('.slide-dot').on('click', function () {
     const targetId = $(this).attr('data-slide');
     const index = slides.findIndex((s) => s.id === targetId);
-    if (index !== -1) {
+    if (index !== -1 && index !== currentSlideIndex) {
       goToSlide(index);
       resetAutoSlide();
     }
   });
 
-  // Auto-advance slides every 7 seconds
+  // Auto-advance slides every 8 seconds (deliberate, steady pacing)
   function startAutoSlide() {
     slideTimer = setInterval(function () {
       let nextIndex = (currentSlideIndex + 1) % slides.length;
       goToSlide(nextIndex);
-    }, 7000);
+    }, 8000);
   }
 
   function resetAutoSlide() {
@@ -114,9 +116,29 @@ $(document).ready(function () {
       document.body.classList.add('menu-open');
     });
 
-    $('#closeMenuBtn, #menuOverlay .menu-nav-links a').on('click', function () {
+    $('#closeMenuBtn').on('click', function () {
+      menu.close();
+    });
+
+    // Smooth navigation click handling from within overlay
+    $('#menuOverlay .menu-nav-links a').on('click', function (e) {
+      const href = this.getAttribute('href');
       menu.close();
       document.body.classList.remove('menu-open');
+
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = $(href);
+        if (target.length) {
+          setTimeout(function () {
+            $('html, body').stop().animate(
+              { scrollTop: target.offset().top - 30 },
+              700,
+              'swing'
+            );
+          }, 150);
+        }
+      }
     });
 
     menu.addEventListener('close', function () {
@@ -130,29 +152,26 @@ $(document).ready(function () {
   // ------------------------------------------------------------------
   $('#searchBtn').on('click', function (e) {
     e.preventDefault();
-    $('#searchOverlay').fadeIn(200);
+    $('#searchOverlay').fadeIn(250);
     $('#searchInput').focus();
     $('body').css('overflow', 'hidden');
   });
 
   $('#closeSearchBtn').on('click', function () {
-    $('#searchOverlay').fadeOut(150, function () {
+    $('#searchOverlay').fadeOut(200, function () {
       $('body').css('overflow', 'auto');
     });
   });
 
-  // ------------------------------------------------------------------
-  // 4. Keyboard Shortcuts (Escape Key)
-  // ------------------------------------------------------------------
   $(document).on('keydown', function (e) {
     if (e.key === 'Escape' && $('#searchOverlay').is(':visible')) {
-      $('#searchOverlay').fadeOut(150);
+      $('#searchOverlay').fadeOut(200);
       $('body').css('overflow', 'auto');
     }
   });
 
   // ------------------------------------------------------------------
-  // 5. Arabic / English Language Switcher Demo
+  // 4. Arabic / English Switcher
   // ------------------------------------------------------------------
   $('#langSwitch').on('click', function (e) {
     e.preventDefault();
@@ -167,37 +186,27 @@ $(document).ready(function () {
   });
 
   // ------------------------------------------------------------------
-  // 6. Accessibility Floating Button Notification
+  // 5. Subtle Accessibility Mode (Polished In-Page Notice, No Alert Box)
   // ------------------------------------------------------------------
   $('#accessibilityBtn').on('click', function () {
+    $('body').toggleClass('high-contrast-mode');
     const isEnlarged = $('body').hasClass('high-contrast-mode');
-    if (!isEnlarged) {
-      $('body').addClass('high-contrast-mode');
-      alert('Accessibility mode enabled: Higher contrast fonts active.');
-    } else {
-      $('body').removeClass('high-contrast-mode');
-      alert('Standard mode restored.');
-    }
+    this.setAttribute('aria-pressed', isEnlarged ? 'true' : 'false');
   });
 
   // ------------------------------------------------------------------
-  // 7. Smooth Scrolling for Navigation Anchors
+  // 6. Smooth Native Anchor Scrolling (Calm Easing)
   // ------------------------------------------------------------------
-  $('a[href^="#"]').on('click', function (e) {
+  $('a[href^="#"]:not([href="#"])').on('click', function (e) {
     const href = this.getAttribute('href');
-    if (!href.startsWith('#')) return;
-    if (href === '#') {
-      e.preventDefault();
-      return;
-    }
+    if (!href || href === '#') return;
     const target = $(href);
     if (target.length) {
       e.preventDefault();
       $('html, body').stop().animate(
-        {
-          scrollTop: target.offset().top - 40
-        },
-        700
+        { scrollTop: target.offset().top - 30 },
+        800,
+        'swing'
       );
     }
   });
