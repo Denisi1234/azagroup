@@ -67,14 +67,11 @@ body {
   stroke-width: 1.6;
 }
 
-.hero-brand-image {
+.brand-logo .hero-brand-image {
   display: block;
-  width: clamp(80px, 9vw, 112px);
+  width: clamp(68px, 8vw, 104px);
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center 58%;
-  border-radius: 6px;
+  stroke: none;
 }
 
 .brand-name {
