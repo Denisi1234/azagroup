@@ -22,7 +22,7 @@ $(document).ready(function () {
       line1: 'INVESTING IN',
       line2: 'GLOBAL TALENT',
       line3: '& INNOVATION',
-      bg: 'assert/banner/aza_banner.png'
+      bg: 'assert/banner/aza_banner.jpg'
     },
     {
       id: '03',
