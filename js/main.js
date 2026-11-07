@@ -21,8 +21,7 @@ $(document).ready(function () {
       id: '02',
       line1: 'INVESTING IN',
       line2: 'GLOBAL TALENT',
-      line3: '& INNOVATION',
-      bg: 'assert/banner/aza_banner.jpg'
+      line3: '& INNOVATION'
     },
     {
       id: '03',
@@ -64,8 +63,10 @@ $(document).ready(function () {
     });
 
     // Update background image
-    const imageUrl = new URL(slide.bg, document.baseURI);
-    $heroContainer.css('--hero-image', `url("${imageUrl.href}")`);
+    const backgroundImage = slide.bg
+      ? `url("${new URL(slide.bg, document.baseURI).href}")`
+      : 'none';
+    $heroContainer.css('--hero-image', backgroundImage);
   }
 
   // Handle dot clicks
