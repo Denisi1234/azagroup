@@ -1,12 +1,12 @@
 :root {
-  --brand-teal: #00b4b6;
-  --brand-teal-hover: #00999b;
-  --brand-dark: #0a0f18;
-  --brand-darker: #060910;
-  --brand-card-bg: #121926;
-  --brand-card-border: #1e293b;
-  --brand-text-muted: #94a3b8;
-  --brand-gold: #c59b27;
+  --brand-dark: #000;
+  --brand-red: #f23b40;
+  --brand-red-deep: #b91c24;
+  --brand-card-bg: #161616;
+  --brand-card-border: rgba(255, 255, 255, 0.2);
+  --brand-text-muted: #c2c2c2;
+  --bs-link-color-rgb: 185, 28, 36;
+  --bs-link-hover-color-rgb: 0, 0, 0;
 }
 
 * {
@@ -38,9 +38,9 @@ body {
   justify-content: space-between;
   background: linear-gradient(
       to bottom,
-      rgba(10, 16, 26, 0.72) 0%,
-      rgba(10, 16, 26, 0.42) 38%,
-      rgba(10, 15, 24, 0.92) 100%
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.42) 38%,
+      rgba(0, 0, 0, 0.92) 100%
     ),
     var(--hero-image) center center / cover no-repeat;
   transition: background-image 0.6s ease-in-out;
@@ -63,7 +63,7 @@ body {
   width: 48px;
   height: 38px;
   fill: none;
-  stroke: var(--brand-teal);
+  stroke: var(--brand-red);
   stroke-width: 1.6;
 }
 
@@ -149,7 +149,7 @@ body {
 }
 
 .menu-hamburger:hover span {
-  background-color: var(--brand-teal);
+  background-color: var(--brand-red);
 }
 
 /* Hero Title */
@@ -217,7 +217,7 @@ body {
 
 .explore-btn:hover {
   background: #ffffff;
-  color: #0b0f19;
+  color: #000;
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
@@ -257,7 +257,7 @@ body {
 .slide-progress-line .progress-bar-inner {
   height: 100%;
   width: calc(100% / 3);
-  background: var(--brand-teal);
+  background: var(--brand-red);
   transition: width 0.4s ease;
 }
 
@@ -284,7 +284,7 @@ body {
   right: 28px;
   width: 44px;
   height: 44px;
-  background-color: var(--brand-teal);
+  background-color: var(--brand-red-deep);
   color: #ffffff;
   border-radius: 50%;
   border: none;
@@ -293,7 +293,7 @@ body {
   justify-content: center;
   cursor: pointer;
   z-index: 999;
-  box-shadow: 0 4px 14px rgba(0, 180, 182, 0.45);
+  box-shadow: 0 4px 14px rgba(242, 59, 64, 0.45);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -304,7 +304,7 @@ body {
 }
 
 .accessibility-btn:hover {
-  background-color: var(--brand-teal-hover);
+  background-color: #98151c;
   transform: scale(1.1);
 }
 
@@ -317,7 +317,7 @@ body {
   left: 0;
   width: 100%;
   height: 140px;
-  background: rgba(10, 15, 25, 0.98);
+  background: rgba(0, 0, 0, 0.98);
   backdrop-filter: blur(15px);
   z-index: 1000;
   display: none;
@@ -330,7 +330,7 @@ body {
   width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 2px solid var(--brand-teal);
+  border-bottom: 2px solid var(--brand-red);
   color: #ffffff;
   font-size: 1.8rem;
   padding: 10px 0;
@@ -349,7 +349,7 @@ body {
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(6, 9, 16, 0.98);
+  background: rgba(0, 0, 0, 0.98);
   z-index: 999;
   display: none;
   flex-direction: column;
@@ -379,7 +379,7 @@ body {
 }
 
 .menu-nav-links a:hover {
-  color: var(--brand-teal);
+  color: var(--brand-red);
   transform: translateX(14px);
 }
 
@@ -391,7 +391,7 @@ body {
 }
 
 .eyebrow-tag {
-  color: var(--brand-teal);
+  color: var(--brand-red);
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.22em;
@@ -430,7 +430,7 @@ body {
 
 .stat-card:hover {
   transform: translateY(-5px);
-  border-color: var(--brand-teal);
+  border-color: var(--brand-red);
 }
 
 .stat-value {
@@ -442,7 +442,7 @@ body {
 }
 
 .stat-value span {
-  color: var(--brand-teal);
+  color: var(--brand-red);
 }
 
 .stat-label {
@@ -476,9 +476,9 @@ body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10, 15, 24, 0.1) 0%,
-    rgba(10, 15, 24, 0.7) 60%,
-    rgba(8, 12, 20, 0.95) 100%
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.7) 60%,
+    rgba(0, 0, 0, 0.95) 100%
   );
   z-index: 1;
   transition: opacity 0.3s ease;
@@ -509,7 +509,7 @@ body {
 
 .sector-num {
   font-size: 0.85rem;
-  color: var(--brand-teal);
+  color: var(--brand-red);
   font-weight: 600;
   letter-spacing: 0.15em;
   margin-bottom: 0.5rem;
@@ -545,14 +545,14 @@ body {
 
 .sector-card:hover .sector-link-text i {
   transform: translateX(5px);
-  color: var(--brand-teal);
+  color: var(--brand-red);
 }
 
 /* ========================================================
    5. SUSTAINABILITY & IMPACT BANNER
    ======================================================== */
 .impact-banner {
-  background: linear-gradient(135deg, #0e1726 0%, #08111e 100%);
+  background: linear-gradient(135deg, #181818 0%, #080808 100%);
   border-top: 1px solid var(--brand-card-border);
   border-bottom: 1px solid var(--brand-card-border);
   position: relative;
@@ -560,9 +560,9 @@ body {
 }
 
 .impact-badge {
-  background: rgba(0, 180, 182, 0.12);
-  border: 1px solid rgba(0, 180, 182, 0.3);
-  color: var(--brand-teal);
+  background: rgba(242, 59, 64, 0.12);
+  border: 1px solid rgba(242, 59, 64, 0.3);
+  color: var(--brand-red);
   padding: 0.4rem 1.1rem;
   border-radius: 9999px;
   font-size: 0.8rem;
@@ -586,7 +586,7 @@ body {
 
 .media-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(0, 180, 182, 0.5);
+  border-color: rgba(242, 59, 64, 0.5);
 }
 
 .media-thumb {
@@ -610,7 +610,7 @@ body {
   position: absolute;
   top: 14px;
   left: 14px;
-  background: rgba(10, 15, 24, 0.85);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(8px);
   color: #fff;
   font-size: 0.72rem;
@@ -640,7 +640,7 @@ body {
 }
 
 .media-link {
-  color: var(--brand-teal);
+  color: var(--brand-red);
   font-size: 0.84rem;
   font-weight: 600;
   text-decoration: none;
@@ -685,6 +685,7 @@ body {
 
 .interior-nav a:hover,
 .interior-nav a[aria-current="page"] {
+  color: var(--brand-red);
   text-decoration: underline;
 }
 
@@ -699,7 +700,7 @@ body {
 /* Who We Are */
 .about-section {
   background: #fff;
-  color: #081e40;
+  color: #000;
   padding: clamp(56px, 5.4vw, 100px) 0;
 }
 
@@ -723,7 +724,7 @@ body {
 }
 
 .about-copy {
-  color: #344967;
+  color: #292929;
   font-size: clamp(20px, 1.95vw, 36px);
   line-height: 1.34;
   letter-spacing: -0.035em;
@@ -735,8 +736,8 @@ body {
   display: inline-block;
   margin-top: clamp(32px, 3.6vw, 66px);
   padding-bottom: 3px;
-  border-bottom: 1px solid #9ba9bb;
-  color: #081e40;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.28);
+  color: var(--brand-red-deep);
   font-size: clamp(18px, 1.45vw, 27px);
   text-decoration: none;
 }
@@ -752,12 +753,12 @@ body {
 
 .contact-details > div {
   padding: 16px 0;
-  border-top: 1px solid #d7e2eb;
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
 }
 
-.contact-details dt { color: #081e40; }
+.contact-details dt { color: #000; }
 .contact-details dd { margin: 4px 0 0; }
-.contact-details a { color: #087277; }
+.contact-details a { color: var(--brand-red-deep); }
 
 @media (max-width: 767px) {
   .about-layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
@@ -768,8 +769,8 @@ body {
 /* What We Do */
 .sectors-section {
   padding: clamp(56px, 5.4vw, 100px) 0;
-  background: #edf2f7;
-  color: #081e40;
+  background: #f4f4f4;
+  color: #000;
   font-family: 'Outfit', sans-serif;
 }
 
@@ -792,7 +793,7 @@ body {
 .sectors-intro p {
   max-width: 44ch;
   margin: 0;
-  color: #344967;
+  color: #292929;
   font-size: clamp(18px, 1.5vw, 24px);
   line-height: 1.45;
 }
@@ -803,8 +804,8 @@ body {
   gap: 1px;
   margin: 0;
   padding: 0;
-  border: 1px solid #d7e2eb;
-  background: #d7e2eb;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: rgba(0, 0, 0, 0.16);
   list-style: none;
 }
 
@@ -816,7 +817,7 @@ body {
 .sector .bi {
   display: block;
   margin-bottom: 18px;
-  color: #087277;
+  color: var(--brand-red-deep);
   font-size: 30px;
   line-height: 1;
 }
@@ -830,7 +831,7 @@ body {
 .sector p {
   max-width: 36ch;
   margin: 0;
-  color: #344967;
+  color: #292929;
   font-size: clamp(16px, 1.2vw, 19px);
   line-height: 1.5;
 }
@@ -845,8 +846,8 @@ body {
 
 /* Partner logo wall */
 .partners-section {
-  background: #f8f9fb;
-  color: #080b52;
+  background: #fff;
+  color: #000;
   padding: 108px 0 130px;
 }
 
@@ -910,7 +911,8 @@ body {
    7. GLOBAL FOOTER
    ======================================================== */
 .site-footer {
-  background: #087bb9;
+  background: var(--brand-dark);
+  border-top: 4px solid var(--brand-red);
   color: #fff;
   padding: clamp(48px, 4vw, 76px) 0 24px;
   font-family: 'Outfit', sans-serif;
