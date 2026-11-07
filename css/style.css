@@ -67,6 +67,16 @@ body {
   stroke-width: 1.6;
 }
 
+.hero-brand-image {
+  display: block;
+  width: clamp(80px, 9vw, 112px);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 58%;
+  border-radius: 6px;
+}
+
 .brand-name {
   font-family: 'Outfit', sans-serif;
   font-size: 1.45rem;
