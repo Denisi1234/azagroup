@@ -734,6 +734,22 @@ body {
 
 .about-link:hover { border-color: currentColor; }
 
+.contact-details {
+  max-width: 36rem;
+  margin: 24px 0 0;
+  font-size: clamp(18px, 1.35vw, 23px);
+  letter-spacing: normal;
+}
+
+.contact-details > div {
+  padding: 16px 0;
+  border-top: 1px solid #d7e2eb;
+}
+
+.contact-details dt { color: #081e40; }
+.contact-details dd { margin: 4px 0 0; }
+.contact-details a { color: #087277; }
+
 @media (max-width: 767px) {
   .about-layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .about-layout h1, .about-layout h2 { padding-inline-end: 0; }
