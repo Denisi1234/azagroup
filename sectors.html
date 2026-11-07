@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What We Do | Mubadala</title>
+  <title>What We Do | Aza Group</title>
 
   <!-- Google Fonts: Jost & Outfit for hairline through extra-bold weights -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,18 +16,25 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <!-- Dedicated Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
 </head>
 <body class="interior-page">
   <header class="interior-header">
-    <a href="index.html" aria-label="Mubadala home" class="brand-logo">
-      <svg aria-hidden="true" viewBox="0 0 54 40" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="27" cy="20" rx="20" ry="15" transform="rotate(-15 27 20)" stroke="currentColor" fill="none" />
-        <ellipse cx="27" cy="20" rx="23" ry="11" transform="rotate(35 27 20)" stroke="currentColor" fill="none" />
-        <ellipse cx="27" cy="20" rx="21" ry="8" transform="rotate(75 27 20)" stroke="currentColor" fill="none" />
-        <circle cx="45" cy="18" r="1.5" fill="currentColor" />
+    <a href="index.html" aria-label="Aza Group home" class="brand-logo">
+      <svg class="hero-brand-image" viewBox="96 117 287 171" width="104" height="62" aria-hidden="true">
+        <defs>
+          <!-- Remove the JPEG's white background and lighten the charcoal mark for the dark banner. -->
+          <filter id="hero-logo-contrast" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="
+               0     0    0  0  1
+              -1.05  1.05 0  0  1
+              -1.12  1.12 0  0  1
+               0    -1.35 0  0  1.30" />
+          </filter>
+        </defs>
+        <image href="assert/banner/aza%20logo.jpeg" width="493" height="361" filter="url(#hero-logo-contrast)" />
       </svg>
-      <span class="brand-name">MUBADALA</span>
+      <span class="brand-name">Aza Group</span>
     </a>
     <nav class="interior-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
@@ -43,40 +50,73 @@
       <div class="sectors-container">
         <div class="sectors-intro">
           <h1 id="sectors-heading">What We Do</h1>
-          <p>Our portfolio spans six sectors that serve people, businesses, and communities.</p>
+          <p>We build digital products for Tanzania and help organisations put technology to work.</p>
         </div>
-        <ul class="sectors-grid" role="list">
-          <li class="sector">
-            <i class="bi bi-car-front" aria-hidden="true"></i>
-            <h3>Automotive</h3>
-            <p>Vehicles and mobility services for everyday travel and business.</p>
-          </li>
-          <li class="sector">
-            <i class="bi bi-bag" aria-hidden="true"></i>
-            <h3>Retail</h3>
-            <p>Products and shopping experiences that meet customers’ everyday needs.</p>
-          </li>
-          <li class="sector">
-            <i class="bi bi-buildings" aria-hidden="true"></i>
-            <h3>Real Estate</h3>
-            <p>Places for people to live, work, and do business.</p>
-          </li>
-          <li class="sector">
-            <i class="bi bi-heart-pulse" aria-hidden="true"></i>
-            <h3>Health</h3>
-            <p>Products and services that support care and well-being.</p>
-          </li>
-          <li class="sector">
-            <i class="bi bi-graph-up" aria-hidden="true"></i>
-            <h3>Finance</h3>
-            <p>Financial services for individuals and businesses.</p>
-          </li>
-          <li class="sector">
-            <i class="bi bi-mortarboard" aria-hidden="true"></i>
-            <h3>Education</h3>
-            <p>Learning opportunities that help people build skills for the future.</p>
-          </li>
-        </ul>
+
+        <section id="products" class="offering-group" aria-labelledby="products-heading">
+          <h2 id="products-heading">Our Products</h2>
+          <ul class="sectors-grid" role="list">
+            <li class="sector">
+              <i class="bi bi-calculator" aria-hidden="true"></i>
+              <span class="offering-badge">Flagship product</span>
+              <h3 class="offering-title">Aza Akaunting</h3>
+              <p>Professional accounting software designed to make everyday accounting easier for Tanzanian businesses.</p>
+              <a class="offering-link" href="https://www.azakaunting.com">Visit Aza Akaunting <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </li>
+            <li class="sector">
+              <i class="bi bi-calendar-check" aria-hidden="true"></i>
+              <h3 class="offering-title">Fastnetstays</h3>
+              <p>An online booking platform for finding and booking accommodation in Tanzania.</p>
+              <a class="offering-link" href="https://www.fastnetstays.com">Visit Fastnetstays <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </section>
+
+        <section id="services" class="offering-group" aria-labelledby="services-heading">
+          <h2 id="services-heading">Our Services</h2>
+          <ul class="sectors-grid" role="list">
+            <li class="sector">
+              <i class="bi bi-code-slash" aria-hidden="true"></i>
+              <h3 class="offering-title">Custom Software Development</h3>
+              <p>We design and build software around how your team works.</p>
+            </li>
+            <li class="sector">
+              <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+              <h3 class="offering-title">Data Science &amp; Analytics</h3>
+              <p>We help organisations analyse data and use it to make informed decisions.</p>
+            </li>
+            <li class="sector">
+              <i class="bi bi-ethernet" aria-hidden="true"></i>
+              <h3 class="offering-title">Networking &amp; Structured Cabling</h3>
+              <p>We install network infrastructure, structured cabling, and wiring for offices and other workspaces.</p>
+            </li>
+            <li class="sector">
+              <i class="bi bi-shield-lock" aria-hidden="true"></i>
+              <h3 class="offering-title">Cybersecurity</h3>
+              <p>We help organisations protect their systems, networks, and data.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="upcoming" class="offering-group" aria-labelledby="upcoming-heading">
+          <h2 id="upcoming-heading">Coming Soon</h2>
+          <ul class="sectors-grid" role="list">
+            <li class="sector">
+              <i class="bi bi-credit-card" aria-hidden="true"></i>
+              <span class="offering-badge">Coming soon</span>
+              <h3 class="offering-title">Aza Pay</h3>
+              <p>Aza Group’s upcoming digital payments product.</p>
+            </li>
+            <li class="sector">
+              <i class="bi bi-server" aria-hidden="true"></i>
+              <span class="offering-badge">Coming soon</span>
+              <h3 class="offering-title">Aza Hosting</h3>
+              <p>Aza Group’s upcoming web hosting service.</p>
+            </li>
+          </ul>
+        </section>
+
+        <a class="offering-link" href="contact.html">Talk to us about your project <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
       </div>
     </section>
   </main>

@@ -1,5 +1,5 @@
 /**
- * Mubadala Website Interaction Scripts
+ * Aza Group Website Interaction Scripts
  * Powered by jQuery 3.7.1
  */
 
@@ -12,22 +12,28 @@ $(document).ready(function () {
   const slides = [
     {
       id: '01',
-      line1: 'BOLD MOVES',
-      line2: 'THAT SHAPE',
-      line3: 'THE FUTURE',
+      line1: 'CLOSING',
+      line2: 'THE DIGITAL',
+      line3: 'DIVIDE',
+      linkText: 'Explore our products',
+      linkHref: '#products',
       bg: 'assert/banner/banner3.webp'
     },
     {
       id: '02',
-      line1: 'INVESTING IN',
-      line2: 'GLOBAL TALENT',
-      line3: '& INNOVATION'
+      line1: 'ACCOUNTING',
+      line2: 'MADE',
+      line3: 'EASIER',
+      linkText: 'Visit Aza Akaunting',
+      linkHref: 'https://www.azakaunting.com'
     },
     {
       id: '03',
-      line1: 'GENERATING',
-      line2: 'SUSTAINABLE',
-      line3: 'VALUE',
+      line1: 'FIND YOUR',
+      line2: 'NEXT STAY',
+      line3: 'IN TANZANIA',
+      linkText: 'Visit Fastnetstays',
+      linkHref: 'https://www.fastnetstays.com',
       bg: 'assert/banner/aza_banner_image2.webp'
     }
   ];
@@ -59,6 +65,7 @@ $(document).ready(function () {
       $('.line-1').text(slide.line1);
       $('.line-2').text(slide.line2);
       $('.line-3').text(slide.line3);
+      $('.explore-btn').attr('href', slide.linkHref).text(slide.linkText);
       $heroTitle.fadeTo(220, 1);
     });
 
@@ -170,6 +177,7 @@ $(document).ready(function () {
   // ------------------------------------------------------------------
   $('a[href^="#"]').on('click', function (e) {
     const href = this.getAttribute('href');
+    if (!href.startsWith('#')) return;
     if (href === '#') {
       e.preventDefault();
       return;
@@ -184,12 +192,6 @@ $(document).ready(function () {
         700
       );
     }
-  });
-
-  // Newsletter delivery needs a subscription service before it can accept signups.
-  $('#footerSubscribe').on('submit', function (e) {
-    e.preventDefault();
-    $('#footerSubscribeStatus').text('Newsletter signup is currently unavailable. Please try again later.');
   });
 
 });
