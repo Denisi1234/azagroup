@@ -2844,3 +2844,52 @@ a, button, input, select, textarea {
     align-items: flex-start;
   }
 }
+
+
+/* ========================================================
+   18. TIER-1 ENTERPRISE HERO REFINEMENT (CINEMATIC POISE)
+   ======================================================== */
+.hero-brand-image {
+  display: block;
+  width: clamp(75px, 8.5vw, 110px);
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.78);
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.98rem, 1.35vw, 1.25rem);
+  font-weight: 300;
+  max-width: 620px;
+  margin-top: 1.4rem;
+  margin-bottom: 0;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+/* Subtle continuous ambient breathing zoom on the background */
+.hero-container {
+  background-size: cover;
+  animation: heroKenBurns 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroKenBurns {
+  0% {
+    background-size: 100% auto;
+  }
+  100% {
+    background-size: 106% auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    animation: none; /* Disable ambient zoom on mobile for buttery smooth performance */
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+}

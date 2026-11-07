@@ -15,6 +15,7 @@ $(document).ready(function () {
       line1: 'CLOSING',
       line2: 'THE DIGITAL',
       line3: 'DIVIDE',
+      subtitle: 'Engineering sovereign digital infrastructure, fintech, and enterprise software for Tanzania.',
       linkText: 'Explore our products',
       linkHref: '#products',
       bg: 'assert/banner/banner3.webp'
@@ -24,6 +25,7 @@ $(document).ready(function () {
       line1: 'ACCOUNTING',
       line2: 'MADE',
       line3: 'EASIER',
+      subtitle: 'Modern business accounting and financial workflows tailored for Tanzanian enterprises.',
       linkText: 'Visit Aza Akaunting',
       linkHref: 'https://www.azakaunting.com',
       bg: 'assert/banner/aza_banner_akaunting.jpg'
@@ -33,6 +35,7 @@ $(document).ready(function () {
       line1: 'FIND YOUR',
       line2: 'NEXT STAY',
       line3: 'IN TANZANIA',
+      subtitle: 'Seamless digital accommodation discovery and booking throughout East Africa.',
       linkText: 'Visit Fastnetstays',
       linkHref: 'https://www.fastnetstays.com',
       bg: 'assert/banner/aza_banner_image2.webp'
@@ -61,14 +64,16 @@ $(document).ready(function () {
     // Calm fade transition without snappy visual jumps
     const $heroContainer = $('.hero-container');
     const $heroTitle = $('.hero-title');
+    const $heroSub = $('.hero-subtitle');
     const $exploreBtn = $('.explore-btn');
 
-    $heroTitle.add($exploreBtn).stop(true, true).fadeTo(400, 0.15, function () {
+    $heroTitle.add($heroSub).add($exploreBtn).stop(true, true).fadeTo(350, 0.15, function () {
       $('.line-1').text(slide.line1);
       $('.line-2').text(slide.line2);
       $('.line-3').text(slide.line3);
+      $heroSub.text(slide.subtitle);
       $exploreBtn.attr('href', slide.linkHref).text(slide.linkText);
-      $heroTitle.add($exploreBtn).fadeTo(500, 1);
+      $heroTitle.add($heroSub).add($exploreBtn).fadeTo(450, 1);
     });
 
     // Update background image smoothly
