@@ -4,4 +4,4 @@ deployment:
     # For an addon domain, change this to its document root in cPanel > Domains.
     - export DEPLOYPATH="$HOME/public_html"
     - /bin/mkdir -p "$DEPLOYPATH"
-    - /bin/cp -R index.html about.html sectors.html contact.html assets client_logo css js "$DEPLOYPATH/"
+    - /bin/cp -R index.html about.html sectors.html contact.html assert assets client_logo css js "$DEPLOYPATH/"

@@ -15,28 +15,21 @@ $(document).ready(function () {
       line1: 'BOLD MOVES',
       line2: 'THAT SHAPE',
       line3: 'THE FUTURE',
-      bg: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop'
+      bg: 'assert/banner/banner3.webp'
     },
     {
       id: '02',
       line1: 'INVESTING IN',
       line2: 'GLOBAL TALENT',
       line3: '& INNOVATION',
-      bg: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'
+      bg: 'assert/banner/aza_banner.png'
     },
     {
       id: '03',
-      line1: 'CATALYZING',
-      line2: 'CLEAN ENERGY',
-      line3: 'SOLUTIONS',
-      bg: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=2070&auto=format&fit=crop'
-    },
-    {
-      id: '04',
       line1: 'GENERATING',
       line2: 'SUSTAINABLE',
       line3: 'VALUE',
-      bg: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'
+      bg: 'assert/banner/aza_banner_image2.webp'
     }
   ];
 
@@ -49,8 +42,8 @@ $(document).ready(function () {
     const slide = slides[index];
 
     // Update active dot
-    $('.slide-dot').removeClass('active');
-    $(`.slide-dot[data-slide="${slide.id}"]`).addClass('active');
+    $('.slide-dot').removeClass('active').removeAttr('aria-current');
+    $(`.slide-dot[data-slide="${slide.id}"]`).addClass('active').attr('aria-current', 'true');
 
     // Update slide number indicator
     $('#slideIndex').text(slide.id);
@@ -71,15 +64,13 @@ $(document).ready(function () {
     });
 
     // Update background image
-    $heroContainer.css(
-      'background-image',
-      `linear-gradient(to bottom, rgba(10, 16, 26, 0.25) 0%, rgba(120, 70, 70, 0.15) 40%, rgba(15, 20, 30, 0.5) 80%, rgba(10, 15, 24, 0.95) 100%), url('${slide.bg}')`
-    );
+    const imageUrl = new URL(slide.bg, document.baseURI);
+    $heroContainer.css('--hero-image', `url("${imageUrl.href}")`);
   }
 
   // Handle dot clicks
   $('.slide-dot').on('click', function () {
-    const targetId = $(this).data('slide');
+    const targetId = $(this).attr('data-slide');
     const index = slides.findIndex((s) => s.id === targetId);
     if (index !== -1) {
       goToSlide(index);
