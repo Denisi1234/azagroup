@@ -15,36 +15,28 @@ $(document).ready(function () {
       line1: 'BOLD MOVES',
       line2: 'THAT SHAPE',
       line3: 'THE FUTURE',
-      bg: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop',
-      ctaText: 'EXPLORE MORE',
-      ctaLink: '#countries-showcase'
+      bg: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop'
     },
     {
       id: '02',
       line1: 'INVESTING IN',
       line2: 'GLOBAL TALENT',
       line3: '& INNOVATION',
-      bg: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
-      ctaText: 'DISCOVER IMPACT',
-      ctaLink: '#countries-showcase'
+      bg: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'
     },
     {
       id: '03',
       line1: 'CATALYZING',
       line2: 'CLEAN ENERGY',
       line3: 'SOLUTIONS',
-      bg: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=2070&auto=format&fit=crop',
-      ctaText: 'OUR STRATEGY',
-      ctaLink: '#countries-showcase'
+      bg: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=2070&auto=format&fit=crop'
     },
     {
       id: '04',
       line1: 'GENERATING',
       line2: 'SUSTAINABLE',
       line3: 'VALUE',
-      bg: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
-      ctaText: 'VIEW PORTFOLIO',
-      ctaLink: '#countries-showcase'
+      bg: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'
     }
   ];
 
@@ -75,7 +67,6 @@ $(document).ready(function () {
       $('.line-1').text(slide.line1);
       $('.line-2').text(slide.line2);
       $('.line-3').text(slide.line3);
-      $('.explore-btn').text(slide.ctaText).attr('href', slide.ctaLink);
       $heroTitle.fadeTo(220, 1);
     });
 
@@ -162,15 +153,9 @@ $(document).ready(function () {
     if (currentText === 'عربي') {
       $(this).text('EN');
       $('html').attr('dir', 'rtl').attr('lang', 'ar');
-      $('.countries-intro-text').text('نحن نركز على الجانب التجاري، ونوظف رأس المال عبر محفظتنا في قطاعات ومناطق جغرافية واعدة.');
-      $('.know-more-btn').text('اعرف المزيد');
-      $('.countries-sub-caption').text('شركات واستثمارات في أكثر من 80 دولة');
     } else {
       $(this).text('عربي');
       $('html').attr('dir', 'ltr').attr('lang', 'en');
-      $('.countries-intro-text').text('We are commercially-focused, deploying capital across our portfolio in promising sectors and geographies.');
-      $('.know-more-btn').text('KNOW MORE');
-      $('.countries-sub-caption').text('Businesses and investments in more than 80 countries');
     }
   });
 

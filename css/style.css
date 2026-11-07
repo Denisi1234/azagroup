@@ -375,108 +375,6 @@ body {
 }
 
 /* ========================================================
-   2B. GLOBAL REACH - 80+ COUNTRIES SECTION (Matches Screenshot)
-   ======================================================== */
-.countries-showcase-section {
-  background-color: #ffffff;
-  color: #111827;
-  padding: 6.5rem 0 7rem 0;
-  border-bottom: 1px solid #e5e7eb;
-  position: relative;
-}
-
-.countries-intro-text {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(1.6rem, 2.4vw, 2.5rem);
-  font-weight: 400;
-  line-height: 1.38;
-  color: #111827;
-  max-width: 460px;
-  letter-spacing: -0.01em;
-  margin-bottom: 2.2rem;
-}
-
-/* Teal Pill Button */
-.know-more-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--brand-teal);
-  color: #ffffff;
-  border: none;
-  border-radius: 9999px;
-  padding: 0.85rem 2.6rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 12px rgba(0, 180, 182, 0.25);
-}
-
-.know-more-btn:hover {
-  background-color: var(--brand-teal-hover);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 180, 182, 0.4);
-}
-
-.countries-metrics-block {
-  padding-left: 2rem;
-}
-
-/* Giant 80+ with Server Room / Data Center Mask */
-.countries-big-number-wrap {
-  display: flex;
-  align-items: flex-start;
-  line-height: 0.85;
-  margin-bottom: 1.2rem;
-}
-
-.countries-clipped-80 {
-  font-family: 'Outfit', 'Jost', sans-serif;
-  font-size: clamp(7.5rem, 16vw, 16rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  /* Server infrastructure data center photo mask matching screenshot */
-  background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop') center center / cover no-repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
-}
-
-.countries-plus-sign {
-  font-family: 'Outfit', 'Jost', sans-serif;
-  font-size: clamp(4.5rem, 9.5vw, 9.5rem);
-  font-weight: 300;
-  color: #b0b8c4;
-  margin-left: 0.4rem;
-  margin-top: -0.2rem;
-  line-height: 1;
-}
-
-.countries-sub-caption {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
-  font-weight: 400;
-  color: #1a1a1a;
-  letter-spacing: 0.01em;
-}
-
-@media (max-width: 991px) {
-  .countries-showcase-section {
-    padding: 4.5rem 0;
-  }
-  .countries-metrics-block {
-    padding-left: 0;
-    margin-top: 3.5rem;
-  }
-}
-
-/* ========================================================
    3. CORPORATE OVERVIEW / STATS SECTION
    ======================================================== */
 .section-padding {
@@ -834,7 +732,6 @@ body {
 }
 
 .footer-col-title,
-.footer-feature-link,
 .footer-prominent-links a {
   font-size: clamp(22px, 1.6vw, 30px);
   line-height: 1.3;
@@ -857,7 +754,8 @@ body {
   text-decoration: none;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links span {
   font-size: clamp(16px, 1.15vw, 21px);
   line-height: 1.45;
 }
@@ -871,7 +769,6 @@ body {
   outline-offset: 5px;
 }
 
-.footer-feature-link { display: inline-block; margin-top: 40px; }
 .footer-prominent-links li + li { margin-top: 24px; }
 .footer-legal-links { margin-top: 84px; }
 
@@ -978,7 +875,7 @@ body {
 @media (max-width: 767px) {
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; }
   .footer-col-title { margin-bottom: 24px; }
-  .footer-feature-link { margin-top: 28px; }
+
   .footer-connect { display: flex; gap: 28px; align-items: stretch; }
   .footer-social-links { justify-content: flex-start; gap: clamp(16px, 5vw, 32px); }
   .footer-subscribe { width: 100%; max-width: 460px; }
