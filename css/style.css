@@ -644,6 +644,49 @@ body {
   text-decoration: underline;
 }
 
+/* Interior pages */
+.interior-page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #fff;
+}
+
+.interior-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding: 20px 4.5%;
+  background: var(--brand-dark);
+}
+
+.interior-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.interior-nav a {
+  color: #fff;
+  text-decoration: none;
+  text-underline-offset: 5px;
+}
+
+.interior-nav a:hover,
+.interior-nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+.interior-page main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.interior-page main > section { flex: 1; }
+
 /* Who We Are */
 .about-section {
   background: #fff;
@@ -660,6 +703,7 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
+.about-layout h1,
 .about-layout h2 {
   margin: 0;
   padding-inline-end: 24px;
@@ -692,7 +736,7 @@ body {
 
 @media (max-width: 767px) {
   .about-layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  .about-layout h2 { padding-inline-end: 0; }
+  .about-layout h1, .about-layout h2 { padding-inline-end: 0; }
   .about-copy p + p { margin-top: 0.75em; }
 }
 
@@ -711,6 +755,7 @@ body {
 
 .sectors-intro { margin-bottom: clamp(28px, 3vw, 50px); }
 
+.sectors-intro h1,
 .sectors-intro h2 {
   margin: 0 0 12px;
   font-size: clamp(32px, 2.6vw, 48px);
