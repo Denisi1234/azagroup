@@ -1,0 +1,13 @@
+# robots.txt for Aza Group
+# https://azagroup.co.tz
+
+User-agent: *
+Allow: /
+
+# Do not index server-side or metadata files
+Disallow: /send-enquiry.php
+Disallow: /README.md
+Disallow: /.cpanel.yml
+
+# Sitemap location
+Sitemap: https://azagroup.co.tz/sitemap.xml
