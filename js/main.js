@@ -99,22 +99,31 @@ $(document).ready(function () {
     startAutoSlide();
   }
 
-  startAutoSlide();
+  if ($('.hero-container').length) startAutoSlide();
 
   // ------------------------------------------------------------------
   // 2. Fullscreen Menu Overlay Toggle
   // ------------------------------------------------------------------
-  $('#hamburgerBtn').on('click', function (e) {
-    e.preventDefault();
-    $('#menuOverlay').css('display', 'flex').hide().fadeIn(250);
-    $('body').css('overflow', 'hidden');
-  });
+  const menu = document.getElementById('menuOverlay');
+  const menuButton = document.getElementById('hamburgerBtn');
 
-  $('#closeMenuBtn, .menu-nav-links a').on('click', function () {
-    $('#menuOverlay').fadeOut(200, function () {
-      $('body').css('overflow', 'auto');
+  if (menu && menuButton) {
+    menuButton.addEventListener('click', function () {
+      menu.showModal();
+      menuButton.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
     });
-  });
+
+    $('#closeMenuBtn, #menuOverlay .menu-nav-links a').on('click', function () {
+      menu.close();
+      document.body.classList.remove('menu-open');
+    });
+
+    menu.addEventListener('close', function () {
+      menuButton.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    });
+  }
 
   // ------------------------------------------------------------------
   // 3. Search Bar Overlay Toggle
@@ -136,9 +145,8 @@ $(document).ready(function () {
   // 4. Keyboard Shortcuts (Escape Key)
   // ------------------------------------------------------------------
   $(document).on('keydown', function (e) {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape' && $('#searchOverlay').is(':visible')) {
       $('#searchOverlay').fadeOut(150);
-      $('#menuOverlay').fadeOut(200);
       $('body').css('overflow', 'auto');
     }
   });

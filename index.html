@@ -17,15 +17,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <!-- Dedicated Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="stylesheet" href="css/style.css?v=6" />
 </head>
 <body>
 
   <!-- ========================================================
        FULLSCREEN NAVIGATION OVERLAY
        ======================================================== -->
-  <div class="menu-overlay" id="menuOverlay">
-    <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close Menu">
+  <dialog class="menu-overlay" id="menuOverlay" aria-label="Site menu">
+    <button class="close-menu-btn" id="closeMenuBtn" type="button" aria-label="Close Menu">
       <i class="bi bi-x-lg"></i>
     </button>
     <div class="container">
@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </dialog>
 
   <!-- ========================================================
        SEARCH OVERLAY
@@ -97,7 +97,7 @@
         </button>
 
         <!-- 2-bar Hamburger Menu Button -->
-        <button class="menu-hamburger" id="hamburgerBtn" aria-label="Open Menu">
+        <button class="menu-hamburger" id="hamburgerBtn" type="button" aria-label="Open Menu" aria-controls="menuOverlay" aria-expanded="false">
           <span></span>
           <span></span>
         </button>
@@ -315,7 +315,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Dedicated jQuery & Custom JS File -->
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=5"></script>
 
 </body>
 </html>

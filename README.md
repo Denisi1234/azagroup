@@ -1,6 +1,6 @@
 # azagroup
 
-Static website with cPanel Git Version Control deployment.
+Website with cPanel Git Version Control deployment and a PHP enquiry form.
 
 ## Connect cPanel once
 
@@ -25,7 +25,7 @@ After pushing changes to GitHub:
 2. Open **Pull or Deploy** and click **Update from Remote**. Wait for it to finish.
 3. Click **Deploy HEAD Commit**.
 
-cPanel runs `.cpanel.yml` to copy the HTML pages, `assert/`, `assets/`, `client_logo/`, `css/`, and `js/` into
+cPanel runs `.cpanel.yml` to copy the HTML pages, `send-enquiry.php`, `assert/`, `assets/`, `client_logo/`, `css/`, and `js/` into
 the document root. Repository metadata and this README are not published.
 Existing files with matching names are overwritten; unrelated server files and
 files removed from Git remain in place.
@@ -35,3 +35,14 @@ the cPanel repository or the live website. **Update from Remote** retrieves the
 latest code; **Deploy HEAD Commit** publishes that retrieved code.
 
 Reference: [cPanel deployment guide](https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-set-up-deployment/).
+
+## Contact form
+
+The form sends quote requests and general enquiries to `info@azagroup.co.tz`. The
+hosting account must run PHP and allow PHP mail. After deployment, submit a test
+enquiry and confirm it reaches that mailbox.
+
+For a local preview with PHP, run `php -S 127.0.0.1:8000` from the project folder
+and open `/contact.html` on that server. Sending from the local preview also
+requires local mail configuration. The static Live Server preview only displays
+the page.

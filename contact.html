@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Aza Group</title>
+  <meta name="description" content="Contact Aza Group in Dar es Salaam to request a quote or discuss your next technology project." />
 
   <!-- Google Fonts: Jost & Outfit for hairline through extra-bold weights -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <!-- Dedicated Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="stylesheet" href="css/style.css?v=6" />
 </head>
 <body class="interior-page">
   <header class="interior-header">
@@ -36,21 +37,34 @@
       </svg>
       <span class="brand-name">Aza Group</span>
     </a>
-    <nav class="interior-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">Who We Are</a>
-      <a href="sectors.html">What We Do</a>
-      <a href="index.html#partners">Who We Work With</a>
-      <a href="contact.html" aria-current="page">Contact Us</a>
-    </nav>
+    <button class="menu-hamburger" id="hamburgerBtn" type="button" aria-label="Open menu" aria-controls="menuOverlay" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
+  <dialog class="menu-overlay" id="menuOverlay" aria-label="Site menu">
+    <button class="close-menu-btn" id="closeMenuBtn" type="button" aria-label="Close menu">
+      <i class="bi bi-x-lg" aria-hidden="true"></i>
+    </button>
+    <div class="container">
+      <nav class="menu-nav-links d-flex flex-column" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">Who We Are</a>
+        <a href="sectors.html">What We Do</a>
+        <a href="index.html#products">Our Products</a>
+        <a href="index.html#partners">Who We Work With</a>
+        <a href="contact.html" aria-current="page">Contact Us</a>
+      </nav>
+    </div>
+  </dialog>
+
   <main>
-    <section id="contact" class="about-section" aria-labelledby="contact-heading">
-      <div class="about-layout">
-        <h1 id="contact-heading">Contact Us</h1>
-        <div class="about-copy">
-          <p>Talk to us about our products, services, or your next digital project.</p>
+    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <div class="contact-layout">
+        <div class="contact-intro">
+          <h1 id="contact-heading">Contact Us</h1>
+          <p>Tell us what you’re working on. We can help you choose a service, scope a project, or request a quote.</p>
           <dl class="contact-details">
             <div>
               <dt>Email</dt>
@@ -62,12 +76,66 @@
             </div>
             <div>
               <dt>Office</dt>
-              <dd>Skycity Mall, opposite Mlimani City<br />University Road, Dar es Salaam</dd>
+              <dd>Skycity Mall, opposite Mlimani City<br />University Road, Dar es Salaam, Tanzania</dd>
             </div>
           </dl>
         </div>
+
+        <form class="quote-form" id="quoteForm" action="send-enquiry.php" method="post" aria-labelledby="quote-heading">
+          <h2 id="quote-heading">Request a quote</h2>
+          <p>Share your project details or select a general enquiry. Fields marked * are required.</p>
+
+          <div class="quote-fields">
+            <label for="enquiry-name">Full name *
+              <input id="enquiry-name" name="name" type="text" autocomplete="name" maxlength="100" required />
+            </label>
+            <label for="enquiry-email">Email address *
+              <input id="enquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+            </label>
+            <label for="enquiry-company">Company or organisation
+              <input id="enquiry-company" name="company" type="text" autocomplete="organization" maxlength="120" />
+            </label>
+            <label for="enquiry-phone">Phone number
+              <input id="enquiry-phone" name="phone" type="tel" autocomplete="tel" maxlength="32" />
+            </label>
+            <label for="enquiry-kind">Enquiry type *
+              <select id="enquiry-kind" name="kind" required>
+                <option value="quote">Request a quote</option>
+                <option value="general">General enquiry</option>
+              </select>
+            </label>
+            <label for="enquiry-service">Product or service *
+              <select id="enquiry-service" name="service" required>
+                <option value="">Select a product or service</option>
+                <option>Aza Akaunting</option>
+                <option>Fastnetstays</option>
+                <option>Custom Software Development</option>
+                <option>Data Science &amp; Analytics</option>
+                <option>Networking &amp; Structured Cabling</option>
+                <option>Cybersecurity</option>
+                <option>Other / Not sure yet</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="quote-message" for="enquiry-message">Project details or message *
+            <textarea id="enquiry-message" name="message" rows="5" maxlength="3000" placeholder="Describe what you need and any budget or timeline you have in mind." required></textarea>
+          </label>
+
+          <div hidden>
+            <label for="enquiry-website">Leave this field empty</label>
+            <input id="enquiry-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button class="quote-submit" type="submit">Send enquiry <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+          <p class="quote-status" id="quoteStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js?v=5"></script>
+  <script src="js/contact.js" defer></script>
 </body>
 </html>
