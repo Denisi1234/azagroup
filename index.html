@@ -120,9 +120,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <!-- Dedicated Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=nobannerclean1" />
-  <!-- Apple Design System for Hero & Polished Interactions -->
-  <link rel="stylesheet" href="css/apple-style.css?v=nobannerclean1" />
+  <link rel="stylesheet" href="css/style.css?v=exactfit101" />
+  <!-- Apple & Stripe Design System for Hero & Polished Interactions -->
+  <link rel="stylesheet" href="css/apple-style.css?v=cleansiteflow1" />
 </head>
 <body>
 
@@ -141,22 +141,24 @@
             <a href="#what-we-do">What We Do</a>
             <a href="#products">Our Products</a>
             <a href="#services">Our Services</a>
-            <a href="#partners">Who We Work With</a>
+            <a href="#partners">Our Partners</a>
             <a href="contact.html">Contact Us</a>
           </div>
         </div>
-        <div class="col-lg-4 d-none d-lg-flex flex-column justify-content-end text-start border-start border-white border-opacity-25 ps-5">
-          <p class="text-uppercase tracking-wider text-white opacity-75 small fw-bold">Headquarters</p>
-          <h5 class="fw-semibold text-white mb-2">Dar es Salaam, Tanzania</h5>
-          <p class="text-white opacity-75 small mb-4">Skycity Mall, opposite Mlimani City, University Road</p>
-          <a class="link-light mb-2 text-decoration-none d-inline-flex align-items-center gap-2" href="mailto:info@azagroup.co.tz">
-            <i class="bi bi-envelope text-info"></i>
-            <span>info@azagroup.co.tz</span>
-          </a>
-          <a class="link-light text-decoration-none d-inline-flex align-items-center gap-2" href="tel:+255624105850">
-            <i class="bi bi-telephone text-info"></i>
-            <span>+255 624 105 850</span>
-          </a>
+        <div class="col-lg-4 d-none d-lg-flex flex-column justify-content-end text-start border-start border-dark border-opacity-10 ps-5">
+          <p class="text-uppercase tracking-wider text-muted small fw-bold">Headquarters</p>
+          <h5 class="fw-semibold text-dark mb-2">Dar es Salaam, Tanzania</h5>
+          <p class="text-secondary small mb-3">Skycity Mall, opposite Mlimani City, University Road</p>
+          <div class="menu-contact-info d-flex flex-column gap-2">
+            <a class="menu-contact-link" href="mailto:info@azagroup.co.tz">
+              <i class="bi bi-envelope"></i>
+              <span>info@azagroup.co.tz</span>
+            </a>
+            <a class="menu-contact-link" href="tel:+255624105850">
+              <i class="bi bi-telephone"></i>
+              <span>+255 624 105 850</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -172,9 +174,10 @@
       <span class="brand-company-name">Aza Group Limited</span>
     </a>
 
-    <!-- Right Header Action: Maintained Hamburger Menu -->
+    <!-- Right Header Action: Maintained Hamburger Menu (Triple 3-Bar) -->
     <div class="nav-actions">
       <button class="menu-hamburger" id="hamburgerBtn" type="button" aria-label="Open Menu" aria-controls="menuOverlay" aria-expanded="false">
+        <span></span>
         <span></span>
         <span></span>
       </button>
@@ -182,31 +185,113 @@
   </header>
 
   <!-- ========================================================
-       APPLE-STYLE HERO (PURE, CLEAN, NO BANNER IMAGE)
+       STRIPE-STYLE FULL-HEIGHT HERO SECTION (100vh) WITH GRADIENT MESH
        ======================================================== -->
-  <section class="hero-container apple-hero-section">
+  <section class="hero-container stripe-hero-section">
 
-    <!-- Main Clean Apple Hero Centerpiece -->
-    <main class="hero-content apple-hero-stage">
-      <h1 class="hero-title apple-hero-title">
-        Trust is <span class="highlight-cyan">expensive.</span><br />Breaking it is free.
-      </h1>
-      <p class="hero-subtitle apple-hero-subtitle">
-        Sovereign digital products and technology infrastructure. Built to work every time.
-      </p>
-      <div class="apple-cta-links">
-        <a href="#what-we-do" class="apple-text-link">Learn more <i class="bi bi-chevron-right" aria-hidden="true"></i></a>
-        <a href="contact.html" class="apple-text-link">Contact us <i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+    <!-- Ambient Stripe-Style Colorful Glow Mesh in Top/Right Corner -->
+    <div class="stripe-mesh-backdrop" aria-hidden="true">
+      <div class="stripe-prism-shape"></div>
+      <div class="stripe-glow-layer stripe-glow-1"></div>
+      <div class="stripe-glow-layer stripe-glow-2"></div>
+      <div class="stripe-glow-layer stripe-glow-3"></div>
+      <div class="stripe-glow-layer stripe-glow-4"></div>
+      <div class="stripe-glow-canvas"></div>
+    </div>
+
+    <!-- Main Content Container (Left-Aligned, Stripe-Inspired) -->
+    <div class="stripe-hero-inner">
+      <div class="stripe-hero-content">
+
+        <!-- Headline: Broad, Conglomerate, Multi-Sector Appeal -->
+        <h1 class="stripe-hero-title">
+          <span class="stripe-title-row-1">Building sustainable enterprises for the <span class="stripe-text-gradient">future.</span></span>
+          <span class="stripe-title-row-2">Pioneering practical solutions, digital ventures, and modern infrastructure that empower businesses and communities across East Africa.</span>
+        </h1>
+
       </div>
-    </main>
+    </div>
 
-    <!-- Clean Apple-style Scroll Indicator -->
-    <footer class="hero-footer apple-hero-footer">
-      <a href="#who-we-are" class="apple-scroll-cue" aria-label="Scroll down">
-        <span class="apple-scroll-text">Scroll to explore</span>
-        <i class="bi bi-chevron-down" aria-hidden="true"></i>
-      </a>
-    </footer>
+    <!-- Continuous Infinite Moving Partner Logo Strip (Marquee - Integrated into 100vh Hero) -->
+    <div id="partners" class="stripe-partners-marquee-wrapper" aria-label="Our Trusted Partners and Clients">
+      <div class="stripe-partners-marquee-track">
+
+        <!-- Set 1 -->
+        <div class="stripe-marquee-group">
+          <div class="stripe-partner-item" title="Alhez Medical Supplies Limited">
+            <img src="client_logo/alhez_logo.jpeg" alt="Alhez Medical Supplies" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="Beashe">
+            <img src="client_logo/beashe.png" alt="Beashe" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="BRELA">
+            <img src="client_logo/brelera.png" alt="BRELA" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="COSTECH">
+            <img src="client_logo/costech.jpg" alt="COSTECH" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="e-Government Authority">
+            <img src="client_logo/ega.png" alt="eGA" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="ICT Commission">
+            <img src="client_logo/ict%20commisoni.jpg" alt="ICT Commission" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="Jobarn">
+            <img src="client_logo/jobarn%20logo.jpeg" alt="Jobarn" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="Parliament of Tanzania">
+            <img src="client_logo/national%20parlimant.jpg" alt="Parliament of Tanzania" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="TCRA">
+            <img src="client_logo/tcra.jpg" alt="TCRA" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="TRA">
+            <img src="client_logo/tra.png" alt="TRA" loading="eager" />
+          </div>
+          <div class="stripe-partner-item" title="UDOM">
+            <img src="client_logo/udom.png" alt="UDOM" loading="eager" />
+          </div>
+        </div>
+
+        <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
+        <div class="stripe-marquee-group" aria-hidden="true">
+          <div class="stripe-partner-item" title="Alhez Medical Supplies Limited">
+            <img src="client_logo/alhez_logo.jpeg" alt="Alhez Medical Supplies" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="Beashe">
+            <img src="client_logo/beashe.png" alt="Beashe" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="BRELA">
+            <img src="client_logo/brelera.png" alt="BRELA" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="COSTECH">
+            <img src="client_logo/costech.jpg" alt="COSTECH" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="e-Government Authority">
+            <img src="client_logo/ega.png" alt="eGA" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="ICT Commission">
+            <img src="client_logo/ict%20commisoni.jpg" alt="ICT Commission" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="Jobarn">
+            <img src="client_logo/jobarn%20logo.jpeg" alt="Jobarn" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="Parliament of Tanzania">
+            <img src="client_logo/national%20parlimant.jpg" alt="Parliament of Tanzania" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="TCRA">
+            <img src="client_logo/tcra.jpg" alt="TCRA" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="TRA">
+            <img src="client_logo/tra.png" alt="TRA" loading="lazy" />
+          </div>
+          <div class="stripe-partner-item" title="UDOM">
+            <img src="client_logo/udom.png" alt="UDOM" loading="lazy" />
+          </div>
+        </div>
+
+      </div>
+    </div>
 
   </section>
 
@@ -220,119 +305,135 @@
     </div>
   </section>
 
-  <section id="what-we-do" class="sectors-section" aria-labelledby="sectors-heading">
+  <!-- ========================================================
+       WHAT WE DO - CONGLOMERATE EDITORIAL VERTICALS (TATA STYLE)
+       ======================================================== -->
+  <section id="what-we-do" class="sectors-section tata-verticals-section" aria-labelledby="sectors-heading">
     <div class="sectors-container">
       <div class="sectors-intro">
         <h2 id="sectors-heading">What We Do</h2>
-        <p>We build digital products for Tanzania and help organisations put technology to work.</p>
+        <p>Engineering sovereign digital products for Tanzania, scalable business software, and enterprise-grade technology infrastructure.</p>
       </div>
 
-      <section id="products" class="offering-group" aria-labelledby="products-heading">
-        <h3 id="products-heading">Our Products</h3>
-        <ul class="sectors-grid" role="list">
-          <li class="sector">
-            <i class="bi bi-calculator" aria-hidden="true"></i>
-            <span class="offering-badge">Flagship product</span>
-            <h4 class="offering-title">Aza Akaunting</h4>
-            <p>Professional accounting software designed to make everyday accounting easier for Tanzanian businesses.</p>
-            <a class="offering-link" href="https://www.azakaunting.com">Visit Aza Akaunting <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-          </li>
-          <li class="sector">
-            <i class="bi bi-calendar-check" aria-hidden="true"></i>
-            <h4 class="offering-title">Fastnetstays</h4>
-            <p>An online booking platform for finding and booking accommodation in Tanzania.</p>
-            <a class="offering-link" href="https://www.fastnetstays.com">Visit Fastnetstays <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-      </section>
+      <!-- Group 1: Products -->
+      <div class="tata-category-group" id="products">
+        <h3 class="tata-category-title">Our Products</h3>
+        <div class="tata-verticals-grid">
 
-      <section id="services" class="offering-group" aria-labelledby="services-heading">
-        <h3 id="services-heading">Our Services</h3>
-        <ul class="sectors-grid" role="list">
-          <li class="sector">
-            <i class="bi bi-code-slash" aria-hidden="true"></i>
-            <h4 class="offering-title">Custom Software Development</h4>
-            <p>We design and build software around how your team works.</p>
-          </li>
-          <li class="sector">
-            <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
-            <h4 class="offering-title">Data Science &amp; Analytics</h4>
-            <p>We help organisations analyse data and use it to make informed decisions.</p>
-          </li>
-          <li class="sector">
-            <i class="bi bi-ethernet" aria-hidden="true"></i>
-            <h4 class="offering-title">Networking &amp; Structured Cabling</h4>
-            <p>We install network infrastructure, structured cabling, and wiring for offices and other workspaces.</p>
-          </li>
-          <li class="sector">
-            <i class="bi bi-shield-lock" aria-hidden="true"></i>
-            <h4 class="offering-title">Cybersecurity</h4>
-            <p>We help organisations protect their systems, networks, and data.</p>
-          </li>
-        </ul>
-      </section>
+          <!-- Card 1: Aza Akaunting (Photo + Text with Notch) -->
+          <article class="tata-vertical-card tata-card-split">
+            <div class="tata-card-media">
+              <img src="assert/banner/aza_banner_akaunting.jpg" alt="Aza Akaunting enterprise financial platform" loading="lazy" />
+            </div>
+            <div class="tata-card-body tata-card-white tata-notch-left">
+              <h4 class="tata-card-title">Aza Akaunting</h4>
+              <p class="tata-card-desc">
+                Enterprise accounting software designed to simplify bookkeeping, invoices, VAT compliance, and real-time financial reporting for Tanzanian businesses.
+              </p>
+              <a href="https://www.azakaunting.com" target="_blank" rel="noopener noreferrer" class="tata-card-arrow-btn" aria-label="Visit Aza Akaunting">
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
 
-      <section id="upcoming" class="offering-group" aria-labelledby="upcoming-heading">
-        <h3 id="upcoming-heading">Coming Soon</h3>
-        <ul class="sectors-grid" role="list">
-          <li class="sector">
-            <i class="bi bi-credit-card" aria-hidden="true"></i>
-            <span class="offering-badge">Coming soon</span>
-            <h4 class="offering-title">Aza Pay</h4>
-            <p>Aza Group’s upcoming digital payments product.</p>
-          </li>
-          <li class="sector">
-            <i class="bi bi-server" aria-hidden="true"></i>
-            <span class="offering-badge">Coming soon</span>
-            <h4 class="offering-title">Aza Hosting</h4>
-            <p>Aza Group’s upcoming web hosting service.</p>
-          </li>
-        </ul>
-      </section>
+          <!-- Card 2: Fastnetstays (Photo + Text with Notch using newly added fastnetbooking.png) -->
+          <article class="tata-vertical-card tata-card-split tata-reverse-order">
+            <div class="tata-card-body tata-card-white tata-notch-right">
+              <h4 class="tata-card-title">Fastnetstays</h4>
+              <p class="tata-card-desc">
+                Modern accommodation and travel discovery platform connecting travelers with verified stays, boutique hotels, and lodges across East Africa.
+              </p>
+              <a href="https://www.fastnetstays.com" target="_blank" rel="noopener noreferrer" class="tata-card-arrow-btn" aria-label="Visit Fastnetstays">
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="tata-card-media">
+              <img src="assert/banner/fastnetbooking.png" alt="Fastnetstays booking platform" loading="lazy" />
+            </div>
+          </article>
 
-      <a class="offering-link" href="contact.html">Talk to us about your project <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-    </div>
-  </section>
+        </div>
+      </div>
 
-  <!-- Client and partner logos. -->
-  <section id="partners" class="partners-section" aria-labelledby="partners-heading">
-    <div class="partners-container">
-      <h2 id="partners-heading">Who We Work With</h2>
-      <ul class="partners-grid" aria-label="Our partners">
-        <li class="partners-logo">
-          <img src="client_logo/alhez_logo.jpeg" alt="Alhez Medical Supplies Limited" width="1280" height="328" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/beashe.png" alt="Beashe" width="717" height="220" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/brelera.png" alt="Business Registrations and Licensing Agency (BRELA)" width="738" height="258" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/costech.jpg" alt="Tanzania Commission for Science and Technology (COSTECH)" width="447" height="447" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/ega.png" alt="e-Government Authority (eGA)" width="246" height="131" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/ict%20commisoni.jpg" alt="ICT Commission" width="225" height="225" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/jobarn%20logo.jpeg" alt="Jobarn" width="1181" height="1181" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/national%20parlimant.jpg" alt="Parliament of Tanzania" width="251" height="291" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/tcra.jpg" alt="Tanzania Communications Regulatory Authority (TCRA)" width="240" height="192" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/tra.png" alt="Tanzania Revenue Authority (TRA)" width="208" height="242" loading="lazy" decoding="async" />
-        </li>
-        <li class="partners-logo">
-          <img src="client_logo/udom.png" alt="University of Dodoma" width="447" height="447" loading="lazy" decoding="async" />
-        </li>
-      </ul>
+      <!-- Group 2: Services -->
+      <div class="tata-category-group" id="services">
+        <h3 class="tata-category-title">Our Services</h3>
+        <div class="tata-verticals-grid">
+
+          <!-- Service 1: Custom Software (Split Card with banner3.webp) -->
+          <article class="tata-vertical-card tata-card-split">
+            <div class="tata-card-media">
+              <img src="assert/banner/banner3.webp" alt="Software engineering and technology architecture" loading="lazy" />
+            </div>
+            <div class="tata-card-body tata-card-white tata-notch-left">
+              <h4 class="tata-card-title">Custom Software Development</h4>
+              <p class="tata-card-desc">
+                Mission-critical enterprise software, API integrations, and cloud portals architected precisely around how your organization operates.
+              </p>
+              <a href="contact.html?service=software" class="tata-card-arrow-btn" aria-label="Learn about software development">
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 2: Data Science (Split Card with Data_Analytics_vs_Data_Science1900x930.jpg) -->
+          <article class="tata-vertical-card tata-card-split tata-reverse-order">
+            <div class="tata-card-body tata-card-white tata-notch-right">
+              <h4 class="tata-card-title">Data Science &amp; Analytics</h4>
+              <p class="tata-card-desc">
+                Transform raw operational data into executive dashboards, predictive modeling, and strategic revenue intelligence.
+              </p>
+              <a href="contact.html?service=analytics" class="tata-card-arrow-btn" aria-label="Learn about analytics">
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="tata-card-media">
+              <img src="assert/banner/Data_Analytics_vs_Data_Science1900x930.jpg" alt="Data analytics, visualization, and data science" loading="lazy" />
+            </div>
+          </article>
+
+          <!-- Service 3: Networking & Cabling (Split Card with networkin and cabling.png) -->
+          <article class="tata-vertical-card tata-card-split">
+            <div class="tata-card-media">
+              <img src="assert/banner/networkin%20and%20cabling.png" alt="Structured cabling, fiber optic, and server networking" loading="lazy" />
+            </div>
+            <div class="tata-card-body tata-card-white tata-notch-left">
+              <h4 class="tata-card-title">Networking &amp; Structured Cabling</h4>
+              <p class="tata-card-desc">
+                Certified fiber optic and copper cabling, server rack installations, campus-wide Wi-Fi, and resilient enterprise networking.
+              </p>
+              <a href="contact.html?service=networking" class="tata-card-arrow-btn" aria-label="Learn about networking">
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Service 4: Cybersecurity (Split Card with aza_banner.jpg) -->
+          <article class="tata-vertical-card tata-card-split tata-reverse-order">
+            <div class="tata-card-body tata-card-white tata-notch-right">
+              <h4 class="tata-card-title">Cybersecurity Solutions</h4>
+              <p class="tata-card-desc">
+                Comprehensive risk assessment, firewall hardening, threat intelligence, and digital asset defense built to international security benchmarks.
+              </p>
+              <a href="contact.html?service=cybersecurity" class="tata-card-arrow-btn" aria-label="Learn about cybersecurity">
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="tata-card-media">
+              <img src="assert/banner/aza_banner.jpg" alt="Cybersecurity defense and network protection" loading="lazy" />
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="tata-bottom-cta">
+        <a class="tata-main-cta-link" href="contact.html">
+          <span>Talk to us about your project</span>
+          <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
     </div>
   </section>
 

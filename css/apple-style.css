@@ -47,7 +47,7 @@ body {
   right: 0 !important;
   z-index: 9999 !important;
   width: 100% !important;
-  height: 48px !important;
+  height: 56px !important;
   padding: 0 clamp(1.2rem, 5vw, 4rem) !important;
   background: rgba(255, 255, 255, 0.88) !important;
   backdrop-filter: saturate(180%) blur(20px) !important;
@@ -71,16 +71,17 @@ body {
 .brand-logo .hero-brand-image {
   display: block !important;
   width: auto !important;
-  height: 26px !important;
-  max-height: 26px !important;
+  height: 40px !important;
+  max-height: 40px !important;
   object-fit: contain !important;
+  transition: transform 0.2s ease !important;
 }
 
 .brand-company-name {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important;
-  font-size: 0.95rem !important;
+  font-size: 1.15rem !important;
   font-weight: 600 !important;
-  letter-spacing: -0.01em !important;
+  letter-spacing: -0.015em !important;
   color: #1d1d1f !important;
   white-space: nowrap !important;
 }
@@ -89,7 +90,11 @@ body {
   color: var(--apple-blue) !important;
 }
 
-/* 2-Bar Apple Hamburger */
+.brand-logo:hover .hero-brand-image {
+  transform: scale(1.04) !important;
+}
+
+/* Triple 3-Bar Hamburger Menu */
 .menu-hamburger {
   background: transparent !important;
   border: none !important;
@@ -98,22 +103,28 @@ body {
   flex-direction: column !important;
   justify-content: center !important;
   gap: 5px !important;
-  width: 24px !important;
-  height: 20px !important;
-  padding: 0 !important;
+  width: 38px !important;
+  height: 32px !important;
+  padding: 4px !important;
+  border-radius: 6px !important;
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+.menu-hamburger:hover {
+  transform: scale(1.08) !important;
 }
 
 .menu-hamburger span {
   display: block !important;
   width: 100% !important;
-  height: 1.6px !important;
-  background-color: #1d1d1f !important;
+  height: 2.4px !important;
+  background-color: #0a2540 !important;
   border-radius: 9999px !important;
-  transition: all 0.2s ease !important;
+  transition: all 0.22s ease !important;
 }
 
 .menu-hamburger:hover span {
-  background-color: var(--apple-blue) !important;
+  background-color: #635bff !important;
 }
 
 /* Fullscreen Menu Dialog */
@@ -145,108 +156,520 @@ body {
   color: var(--apple-blue) !important;
 }
 
-/* 3. Primary Hero Section */
+/* Clean, Seamless Menu Contact Links */
+.menu-contact-info {
+  margin-top: 4px !important;
+}
+
+.menu-contact-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #1d1d1f !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important;
+  font-size: 0.94rem !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  letter-spacing: -0.01em !important;
+  transition: color 0.18s ease, transform 0.18s ease !important;
+}
+
+.menu-contact-link i {
+  color: #0071e3 !important;
+  font-size: 1rem !important;
+  transition: transform 0.18s ease !important;
+}
+
+.menu-contact-link:hover {
+  color: #0071e3 !important;
+  transform: translateX(2px) !important;
+}
+
+.menu-contact-link:hover i {
+  transform: scale(1.1) !important;
+}
+
+/* ==========================================================================
+   3. STRIPE-STYLE FULL-HEIGHT HERO SECTION (100vh / min-height: 100dvh)
+   ========================================================================== */
 .hero-container,
-.apple-hero-section {
+.stripe-hero-section {
   position: relative !important;
   width: 100% !important;
-  min-height: auto !important;
-  height: auto !important;
+  height: calc(100vh - 56px) !important;
+  height: calc(100dvh - 56px) !important;
+  min-height: calc(100vh - 56px) !important;
+  min-height: calc(100dvh - 56px) !important;
+  max-height: calc(100vh - 56px) !important;
+  max-height: calc(100dvh - 56px) !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: flex-start !important;
-  align-items: center !important;
-  padding: clamp(64px, 10vw, 120px) 1.5rem clamp(56px, 8vw, 96px) !important;
+  justify-content: space-between !important;
+  align-items: stretch !important;
+  padding: 0 !important;
   background: #ffffff !important;
+  overflow: hidden !important;
   border: none !important;
   box-shadow: none !important;
   color: #1d1d1f !important;
   box-sizing: border-box !important;
 }
 
-.hero-content,
-.apple-hero-stage {
-  max-width: 920px !important;
-  margin: 0 auto !important;
-  text-align: center !important;
-  padding: 0 !important;
-  border: none !important;
+/* 3.1 Stripe Ambient Vibrant Gradient Mesh in Top-Right */
+.stripe-mesh-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.apple-hero-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: clamp(2.75rem, 6.2vw, 4.8rem) !important;
-  font-weight: 700 !important;
-  line-height: 1.06 !important;
-  letter-spacing: -0.035em !important;
-  color: #1d1d1f !important;
-  text-transform: none !important;
-  margin: 0 auto 20px auto !important;
-  max-width: 860px !important;
-  text-wrap: balance !important;
+/* Layered glowing orbs creating the Stripe diagonal prism fold */
+.stripe-prism-shape {
+  position: absolute;
+  top: -15%;
+  right: -5%;
+  width: 60vw;
+  height: 90vh;
+  background: linear-gradient(
+    135deg,
+    #ff3366 0%,
+    #ff6600 25%,
+    #ffcc00 50%,
+    #00ccff 75%,
+    #9933ff 100%
+  );
+  clip-path: polygon(45% 0%, 100% 0%, 100% 85%, 25% 100%, 0% 40%);
+  filter: blur(55px);
+  opacity: 0.85;
+  transform: rotate(-8deg);
 }
 
-.apple-hero-title .highlight-cyan {
-  color: #00b4d8 !important;
-  background: linear-gradient(135deg, #00d2ff 0%, #0099cc 100%) !important;
+.stripe-glow-layer {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.85;
+}
+
+.stripe-glow-1 {
+  top: -12%;
+  right: -8%;
+  width: 58vw;
+  height: 60vh;
+  background: radial-gradient(circle, #ff6b4a 0%, #ff2a85 45%, rgba(255, 42, 133, 0) 70%);
+}
+
+.stripe-glow-2 {
+  top: 4%;
+  right: 6%;
+  width: 52vw;
+  height: 52vh;
+  background: radial-gradient(circle, #ffc837 0%, #ff8008 50%, rgba(255, 128, 8, 0) 72%);
+  mix-blend-mode: screen;
+}
+
+.stripe-glow-3 {
+  top: -8%;
+  right: 18%;
+  width: 46vw;
+  height: 50vh;
+  background: radial-gradient(circle, #7928ca 0%, #4338ca 50%, rgba(67, 56, 202, 0) 70%);
+  opacity: 0.6;
+}
+
+.stripe-glow-4 {
+  top: 15%;
+  right: -5%;
+  width: 44vw;
+  height: 48vh;
+  background: radial-gradient(circle, #00d2ff 0%, #0070f3 50%, rgba(0, 112, 243, 0) 70%);
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+}
+
+/* Smooth gradient overlay to ensure crystal clear readability of text on the left */
+.stripe-glow-canvas {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.99) 45%,
+    rgba(255, 255, 255, 0.75) 60%,
+    rgba(255, 255, 255, 0.2) 85%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+}
+
+/* 3.2 Main Stripe Content Area */
+.stripe-hero-inner {
+  position: relative;
+  z-index: 5;
+  width: min(92%, 1320px);
+  margin-inline: auto;
+  padding: 0 clamp(1.2rem, 3vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.stripe-hero-content {
+  max-width: 860px;
+  text-align: left;
+}
+
+/* Eyebrow badge matching Stripe's exact styling */
+.stripe-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: clamp(20px, 2.8vh, 32px);
+}
+
+.stripe-eyebrow-text {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: clamp(0.85rem, 1.05vw, 0.95rem);
+  font-weight: 500;
+  color: #0a2540;
+  letter-spacing: -0.01em;
+}
+
+.stripe-metric-val {
+  color: #425466;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+/* Stripe Hero Headline */
+.stripe-hero-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Helvetica Neue", sans-serif !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.stripe-title-row-1 {
+  display: block;
+  font-size: clamp(2.6rem, 4.6vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: #0a2540;
+  margin-bottom: 16px;
+}
+
+.stripe-title-row-2 {
+  display: block;
+  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.28;
+  letter-spacing: -0.025em;
+  color: #425466;
+  max-width: 760px;
+}
+
+.stripe-title-row-2 sup {
+  font-size: 0.55em;
+  top: -0.6em;
+  color: #635bff;
+}
+
+.stripe-text-gradient {
+  background: linear-gradient(135deg, #635bff 0%, #a259ff 50%, #f43f5e 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   display: inline-block !important;
 }
 
-.apple-hero-subtitle {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: clamp(1.15rem, 1.7vw, 1.4rem) !important;
-  font-weight: 400 !important;
-  line-height: 1.48 !important;
-  letter-spacing: -0.015em !important;
-  color: #6e6e73 !important;
-  max-width: 620px !important;
-  margin: 0 auto 30px auto !important;
-  text-wrap: balance !important;
+/* Floating Chat Now Pill Button */
+.stripe-chat-pill {
+  position: absolute;
+  right: clamp(16px, 3vw, 36px);
+  bottom: clamp(75px, 9vh, 90px);
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a2540;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(10, 37, 64, 0.25);
+  transition: all 0.2s ease;
 }
 
-/* Apple CTAs Container (Official Apple Inline Text Links with Chevrons) */
-.apple-cta-links {
+.stripe-chat-pill:hover {
+  background: #635bff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(99, 91, 255, 0.35);
+}
+
+/* Stripe Buttons */
+.stripe-cta-group {
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
-  gap: 32px !important;
-  margin-top: 8px !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
 }
 
-.apple-text-link {
+.stripe-btn-primary {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 5px !important;
+  gap: 8px !important;
+  background: #635bff !important;
+  color: #ffffff !important;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important;
-  font-size: clamp(17px, 1.4vw, 19px) !important;
-  font-weight: 400 !important;
-  letter-spacing: -0.015em !important;
-  color: #0071e3 !important;
+  font-size: 0.96rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  padding: 11px 22px !important;
+  border-radius: 9999px !important;
   text-decoration: none !important;
-  cursor: pointer !important;
-  transition: all 0.2s ease !important;
+  box-shadow: 0 4px 14px rgba(99, 91, 255, 0.35) !important;
+  transition: all 0.22s ease !important;
 }
 
-.apple-text-link i {
-  font-size: 13px !important;
-  font-weight: 600 !important;
+.stripe-btn-primary:hover {
+  background: #534be8 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(99, 91, 255, 0.45) !important;
+}
+
+.stripe-btn-primary i {
+  font-size: 11px !important;
+  font-weight: 700 !important;
   transition: transform 0.2s ease !important;
 }
 
-.apple-text-link:hover {
-  color: #0077ed !important;
-  text-decoration: underline !important;
-  text-underline-offset: 4px !important;
-}
-
-.apple-text-link:hover i {
+.stripe-btn-primary:hover i {
   transform: translateX(3px) !important;
 }
 
-.apple-hero-footer {
-  display: none !important;
+.stripe-btn-secondary {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: #ffffff !important;
+  color: #0a2540 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  padding: 10px 20px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(10, 37, 64, 0.16) !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.22s ease !important;
+}
+
+.stripe-btn-secondary:hover {
+  color: #635bff !important;
+  border-color: rgba(99, 91, 255, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+}
+
+.stripe-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   3.3 STRIPE CONTINUOUS MOVING PARTNER LOGO STRIP (PINNED AT BOTTOM OF 100vh HERO)
+   ========================================================================== */
+.stripe-partners-marquee-wrapper {
+  position: relative !important;
+  z-index: 10 !important;
+  display: block !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  padding: clamp(14px, 1.8vh, 22px) 0 !important;
+  overflow: hidden !important;
+  user-select: none !important;
+  box-sizing: border-box !important;
+  margin-top: auto !important;
+  flex-shrink: 0 !important;
+}
+
+/* Fade gradients at the left and right edges */
+.stripe-partners-marquee-wrapper::before,
+.stripe-partners-marquee-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(80px, 12vw, 160px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.stripe-partners-marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 25%, rgba(255, 255, 255, 0) 100%);
+}
+
+.stripe-partners-marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 25%, rgba(255, 255, 255, 0) 100%);
+}
+
+.stripe-partners-marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  align-items: center !important;
+  animation: stripeMarqueeScroll 28s linear infinite !important;
+  will-change: transform;
+}
+
+.stripe-partners-marquee-wrapper:hover .stripe-partners-marquee-track {
+  animation-play-state: paused !important;
+}
+
+.stripe-marquee-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: clamp(48px, 6vw, 92px) !important;
+  padding-right: clamp(48px, 6vw, 92px) !important;
+  flex-shrink: 0 !important;
+}
+
+.stripe-partner-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 56px !important;
+  min-width: 110px !important;
+  flex-shrink: 0 !important;
+  opacity: 0.95 !important;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.stripe-partner-item:hover {
+  opacity: 1 !important;
+  transform: translateY(-2px) scale(1.08) !important;
+}
+
+.stripe-partner-item img {
+  max-height: 48px !important;
+  max-width: 160px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  mix-blend-mode: multiply !important;
+}
+
+@keyframes stripeMarqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Responsive adjustment for Mobile & Tablet screens */
+@media (max-width: 900px) {
+  .stripe-title-row-2 {
+    display: none !important;
+  }
+
+  .hero-container,
+  .stripe-hero-section {
+    min-height: calc(100vh - 56px) !important;
+    min-height: calc(100dvh - 56px) !important;
+    height: calc(100vh - 56px) !important;
+    height: calc(100dvh - 56px) !important;
+    max-height: calc(100vh - 56px) !important;
+    max-height: calc(100dvh - 56px) !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .stripe-hero-inner {
+    width: 100% !important;
+    padding: 0 1.25rem !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  .stripe-hero-title {
+    margin: 0 !important;
+  }
+
+  .stripe-title-row-1 {
+    font-size: clamp(2rem, 7.8vw, 2.75rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.035em !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .stripe-glow-canvas {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.9) 55%,
+      #ffffff 100%
+    );
+  }
+
+  .stripe-prism-shape {
+    width: 95vw !important;
+    height: 70vh !important;
+    top: -10% !important;
+    right: -20% !important;
+    filter: blur(45px) !important;
+    opacity: 0.75 !important;
+  }
+
+  .stripe-glow-1 {
+    width: 95vw;
+    height: 48vh;
+    top: -5%;
+    right: -12%;
+  }
+
+  .stripe-glow-2 {
+    width: 85vw;
+    height: 42vh;
+  }
+
+  .stripe-partners-marquee-wrapper {
+    padding: 10px 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .stripe-partners-marquee-track {
+    animation-duration: 25s;
+  }
+
+  .stripe-marquee-group {
+    gap: 36px !important;
+    padding-right: 36px !important;
+  }
+
+  .stripe-partner-item {
+    height: 34px !important;
+    min-width: 70px !important;
+  }
+
+  .stripe-partner-item img {
+    max-height: 28px !important;
+    max-width: 95px !important;
+  }
 }
 
 /* 4. "Who We Are" Section */
@@ -288,150 +711,306 @@ body {
   margin-top: 1rem !important;
 }
 
-/* 5. "What We Do" Section */
-.sectors-section {
-  background: #ffffff !important;
+/* ==========================================================================
+   5. "WHAT WE DO" - TATA CONGLOMERATE EDITORIAL VERTICALS
+   ========================================================================== */
+.sectors-section,
+.tata-verticals-section {
+  background: #fbfbfd !important;
   color: #1d1d1f !important;
-  padding: clamp(48px, 6vw, 80px) 1.5rem !important;
-  border: none !important;
+  padding: clamp(64px, 8vw, 108px) 1.5rem !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
 
-.sectors-container {
-  width: var(--apple-container) !important;
-  margin-inline: auto !important;
-}
-
-.sectors-intro {
-  margin-bottom: clamp(36px, 5vw, 56px) !important;
-  text-align: left !important;
+.tata-section-eyebrow {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #0071e3;
+  margin-bottom: 12px;
 }
 
 .sectors-intro h2 {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif !important;
-  font-size: clamp(2.2rem, 3.6vw, 3.2rem) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Helvetica Neue", sans-serif !important;
+  font-size: clamp(2.4rem, 4vw, 3.6rem) !important;
   font-weight: 700 !important;
-  letter-spacing: -0.03em !important;
-  color: #1d1d1f !important;
-  margin-bottom: 8px !important;
-  line-height: 1.15 !important;
+  letter-spacing: -0.035em !important;
+  color: #0a2540 !important;
+  margin-bottom: 12px !important;
+  line-height: 1.12 !important;
 }
 
 .sectors-intro p {
-  font-size: clamp(1.05rem, 1.4vw, 1.25rem) !important;
-  color: #6e6e73 !important;
+  font-size: clamp(1.1rem, 1.45vw, 1.3rem) !important;
+  color: #425466 !important;
   margin: 0 !important;
-  max-width: 600px !important;
+  max-width: 680px !important;
+  line-height: 1.5 !important;
 }
 
-.offering-group {
-  margin-bottom: clamp(40px, 5vw, 64px) !important;
-  border: none !important;
+.tata-category-group {
+  margin-top: clamp(48px, 6vw, 72px);
 }
 
-.offering-group h3 {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif !important;
-  font-size: clamp(1.3rem, 1.8vw, 1.6rem) !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.02em !important;
-  color: #1d1d1f !important;
-  margin-bottom: 24px !important;
-  padding-bottom: 8px !important;
+.tata-category-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0a2540;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-/* Responsive Grid - 2 columns on desktop, 1 on mobile */
-.sectors-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: clamp(28px, 4vw, 48px) !important;
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  background: transparent !important;
-  border: none !important;
+.tata-category-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
 }
 
-.sector {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
+/* Tata Vertical Grid */
+.tata-verticals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 3.5vw, 40px);
 }
 
-.sector:hover {
-  transform: none !important;
-  box-shadow: none !important;
+/* Base Card Style */
+.tata-vertical-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  min-height: 380px;
 }
 
-#products .sector:first-child {
-  box-shadow: none !important;
-  border: none !important;
+.tata-vertical-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
 }
 
-.sector > .bi,
-.sector .bi {
-  font-size: 1.75rem !important;
-  color: #0071e3 !important;
-  margin-bottom: 12px !important;
-  display: block !important;
-  line-height: 1 !important;
+/* Split Card (Image + Text with Tata Notch/Pointer) */
+.tata-card-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
 }
 
-.offering-badge {
-  display: inline-block !important;
-  font-size: 0.72rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  color: #0071e3 !important;
-  background: transparent !important;
-  padding: 0 !important;
-  margin-bottom: 6px !important;
+.tata-card-media {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
 }
 
-.offering-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif !important;
-  font-size: clamp(1.2rem, 1.6vw, 1.4rem) !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.02em !important;
-  color: #1d1d1f !important;
-  margin: 0 0 8px 0 !important;
+.tata-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.sector p {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important;
-  font-size: 1rem !important;
-  line-height: 1.55 !important;
-  color: #6e6e73 !important;
-  margin: 0 0 14px 0 !important;
+.tata-vertical-card:hover .tata-card-media img {
+  transform: scale(1.05);
 }
 
-.offering-link,
-a.offering-link {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 5px !important;
-  font-size: 0.95rem !important;
-  font-weight: 400 !important;
-  color: #0071e3 !important;
-  text-decoration: none !important;
-  margin-top: auto !important;
+/* Notch pointers connecting text block to photo */
+.tata-notch-left {
+  position: relative;
 }
 
-.offering-link:hover,
-a.offering-link:hover {
-  color: #0077ed !important;
-  text-decoration: underline !important;
-  text-underline-offset: 4px !important;
+.tata-notch-left::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: -12px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid #ffffff;
+  z-index: 5;
 }
 
-.sectors-container > .offering-link {
-  display: inline-flex !important;
-  margin-top: 24px !important;
-  font-size: 1.05rem !important;
+.tata-notch-right {
+  position: relative;
+}
+
+.tata-notch-right::after {
+  content: "";
+  position: absolute;
+  top: 36px;
+  right: -12px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid #ffffff;
+  z-index: 5;
+}
+
+/* Card Body Typography */
+.tata-card-body {
+  padding: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  flex: 1;
+}
+
+.tata-card-white {
+  background: #ffffff;
+}
+
+.tata-card-dark {
+  background: #111116;
+  background: linear-gradient(145deg, #18181f 0%, #0d0d12 100%);
+}
+
+.tata-badge {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0071e3;
+  margin-bottom: 24px;
+}
+
+.text-light-muted {
+  color: #8e8e93 !important;
+}
+
+.tata-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #1d1d1f;
+  margin: 0 0 16px 0;
+  line-height: 1.22;
+}
+
+/* Tata Gold Accent Vertical Line Quote */
+.tata-card-desc {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.6;
+  color: #425466;
+  margin: 0 0 28px 0;
+  padding-left: 18px;
+  border-left: 2px solid #c9933b;
+  flex-grow: 1;
+}
+
+.text-white-muted {
+  color: #a1a1aa !important;
+  border-left-color: #d4a359 !important;
+}
+
+/* Tata Gold Floating Arrow Link in Bottom Right */
+.tata-card-arrow-btn {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #c9933b;
+  font-size: 1.35rem;
+  text-decoration: none;
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.tata-arrow-white {
+  color: #ffffff;
+}
+
+.tata-vertical-card:hover .tata-card-arrow-btn {
+  transform: translateX(6px);
+  color: #b07d2b;
+}
+
+.tata-vertical-card:hover .tata-arrow-white {
+  color: #d4a359;
+}
+
+/* Standalone Single Box Card */
+.tata-card-standalone {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.tata-bottom-cta {
+  margin-top: clamp(48px, 6vw, 72px);
+  text-align: center;
+}
+
+.tata-main-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #0a2540;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(10, 37, 64, 0.2);
+  transition: all 0.25s ease;
+}
+
+.tata-main-cta-link:hover {
+  background: #635bff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99, 91, 255, 0.35);
+}
+
+.tata-main-cta-link i {
+  transition: transform 0.2s ease;
+}
+
+.tata-main-cta-link:hover i {
+  transform: translateX(4px);
+}
+
+@media (max-width: 992px) {
+  .tata-verticals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tata-card-split {
+    grid-template-columns: 1fr;
+  }
+
+  .tata-card-media {
+    height: 240px;
+  }
+
+  .tata-reverse-order {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .tata-notch-left::before,
+  .tata-notch-right::after {
+    display: none;
+  }
 }
 
 /* 6. "Who We Work With" (Partners Gallery) */
@@ -660,62 +1239,103 @@ a.offering-link:hover {
 }
 
 .borderless-form-container {
-  width: min(100%, 640px) !important;
+  width: min(100%, 720px) !important;
   margin-inline: auto !important;
   border: none !important;
 }
 
+.field-item {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
 .field-item label {
-  font-size: 13px !important;
-  font-weight: 500 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Outfit", sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
   color: #1d1d1f !important;
-  margin-bottom: 6px !important;
+  margin-bottom: 8px !important;
   display: block !important;
 }
 
 .field-item label .req {
-  color: #0071e3 !important;
+  color: #635bff !important;
+  font-weight: 700 !important;
 }
 
+/* Sharp Card Box Aesthetic for Form Inputs */
 .field-item input,
 .field-item select,
 .field-item textarea {
   width: 100% !important;
-  border: 1px solid #d2d2d7 !important;
-  border-radius: 8px !important;
-  padding: 10px 14px !important;
+  border: 1.5px solid #e2e8f0 !important;
+  border-radius: 0px !important; /* Sharp crisp edges */
+  padding: 14px 16px !important;
   font-size: 15px !important;
-  color: #1d1d1f !important;
-  background: #ffffff !important;
+  color: #0a2540 !important;
+  background: #fbfbfd !important;
   box-sizing: border-box !important;
   font-family: inherit !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.field-item input:hover,
+.field-item select:hover,
+.field-item textarea:hover {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
 }
 
 .field-item input:focus,
 .field-item select:focus,
 .field-item textarea:focus {
-  border-color: #0071e3 !important;
+  background: #ffffff !important;
+  border-color: #0a2540 !important;
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15) !important;
+  box-shadow: 0 0 0 3px rgba(10, 37, 64, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+.field-item select {
+  cursor: pointer !important;
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%230a2540' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  padding-right: 2.75rem !important;
+}
+
+.field-item textarea {
+  min-height: 140px !important;
+  line-height: 1.6 !important;
+  resize: vertical !important;
 }
 
 .neat-submit-btn {
-  background: #0071e3 !important;
+  background: #0a2540 !important;
   color: #ffffff !important;
-  border-radius: 980px !important;
-  padding: 10px 26px !important;
+  border-radius: 0px !important; /* Matching sharp aesthetic */
+  padding: 13px 32px !important;
   font-size: 15px !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
   border: none !important;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 6px !important;
-  transition: background 0.2s ease !important;
+  gap: 8px !important;
+  box-shadow: 0 4px 14px rgba(10, 37, 64, 0.18) !important;
+  transition: all 0.22s ease !important;
 }
 
 .neat-submit-btn:hover {
-  background: #0077ed !important;
+  background: #635bff !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(99, 91, 255, 0.3) !important;
 }
 
 /* ==========================================================================
