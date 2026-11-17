@@ -122,7 +122,7 @@
   <!-- Dedicated Custom CSS -->
   <link rel="stylesheet" href="css/style.css?v=exactfit101" />
   <!-- Apple & Stripe Design System for Hero & Polished Interactions -->
-  <link rel="stylesheet" href="css/apple-style.css?v=sharpfontsallsections1" />
+  <link rel="stylesheet" href="css/apple-style.css?v=whoweworkwithrevert1" />
 </head>
 <body>
 
@@ -165,133 +165,51 @@
   </dialog>
 
   <!-- ========================================================
-       APPLE-STYLE STICKY NAVIGATION BAR (STANDALONE TOP HEADER)
+       HERO BANNER SECTION (Black Slides Carousel + Pinned Logo Strip)
        ======================================================== -->
-  <header class="hero-header apple-nav-bar d-flex justify-content-between align-items-center">
-    <!-- Logo + Brand Name -->
-    <a href="index.html" class="brand-logo" aria-label="Aza Group home">
-      <img src="assert/banner/aza_logo_hero.png?v=cyanmark1" alt="Aza Group" class="hero-brand-image" width="310" height="288" />
-      <span class="brand-company-name">Aza Group Limited</span>
-    </a>
+  <section class="hero-container">
 
-    <!-- Right Header Action: Maintained Hamburger Menu (Triple 3-Bar) -->
-    <div class="nav-actions">
-      <button class="menu-hamburger" id="hamburgerBtn" type="button" aria-label="Open Menu" aria-controls="menuOverlay" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+    <!-- Header Navigation (Transparent atop Black Hero) -->
+    <header class="hero-header d-flex justify-content-between align-items-center">
+      <!-- Logo + Brand Name -->
+      <a href="index.html" class="brand-logo" aria-label="Aza Group home">
+        <img src="assert/banner/aza_logo_hero.png" alt="Aza Group" class="hero-brand-image" width="104" height="62" />
+        <span class="brand-name">AZA GROUP</span>
+      </a>
 
-  <!-- ========================================================
-       STRIPE-STYLE FULL-HEIGHT HERO SECTION (100vh) WITH GRADIENT MESH
-       ======================================================== -->
-  <section class="hero-container stripe-hero-section">
-
-    <!-- Ambient Stripe-Style Colorful Glow Mesh in Top/Right Corner -->
-    <div class="stripe-mesh-backdrop" aria-hidden="true">
-      <div class="stripe-prism-shape"></div>
-      <div class="stripe-glow-layer stripe-glow-1"></div>
-      <div class="stripe-glow-layer stripe-glow-2"></div>
-      <div class="stripe-glow-layer stripe-glow-3"></div>
-      <div class="stripe-glow-layer stripe-glow-4"></div>
-      <div class="stripe-glow-canvas"></div>
-    </div>
-
-    <!-- Main Content Container (Left-Aligned, Stripe-Inspired) -->
-    <div class="stripe-hero-inner">
-      <div class="stripe-hero-content">
-
-        <!-- Headline: Broad, Conglomerate, Multi-Sector Appeal -->
-        <h1 class="stripe-hero-title">
-          <span class="stripe-title-row-1">Building sustainable enterprises for the <span class="stripe-text-gradient">future.</span></span>
-          <span class="stripe-title-row-2">Pioneering practical solutions, digital ventures, and modern infrastructure that empower businesses and communities across East Africa.</span>
-        </h1>
-
+      <!-- Right Header Actions (Clean 3-Bar Hamburger Menu) -->
+      <div class="nav-actions">
+        <button class="menu-hamburger" id="hamburgerBtn" type="button" aria-label="Open Menu" aria-controls="menuOverlay" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </div>
+    </header>
 
-    <!-- Continuous Infinite Moving Partner Logo Strip (Marquee - Integrated into 100vh Hero) -->
-    <div id="partners" class="stripe-partners-marquee-wrapper" aria-label="Our Trusted Partners and Clients">
-      <div class="stripe-partners-marquee-track">
+    <!-- Main Hero Title Statement with 3 Sliding Texts -->
+    <main class="hero-content">
+      <h1 class="hero-title">
+        <span class="line-1">CLOSING</span>
+        <span class="line-2">THE DIGITAL</span>
+        <span class="line-3">DIVIDE</span>
+      </h1>
+      <p class="hero-subtitle">Engineering sovereign digital infrastructure, fintech, and enterprise software for Tanzania.</p>
+      <a href="#products" class="explore-btn">Explore our products</a>
+    </main>
 
-        <!-- Set 1 -->
-        <div class="stripe-marquee-group">
-          <div class="stripe-partner-item" title="Alhez Medical Supplies Limited">
-            <img src="client_logo/alhez_logo.jpeg" alt="Alhez Medical Supplies" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="Beashe">
-            <img src="client_logo/beashe.png" alt="Beashe" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="BRELA">
-            <img src="client_logo/brelera.png" alt="BRELA" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="COSTECH">
-            <img src="client_logo/costech.jpg" alt="COSTECH" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="e-Government Authority">
-            <img src="client_logo/ega.png" alt="eGA" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="ICT Commission">
-            <img src="client_logo/ict%20commisoni.jpg" alt="ICT Commission" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="Jobarn">
-            <img src="client_logo/jobarn%20logo.jpeg" alt="Jobarn" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="Parliament of Tanzania">
-            <img src="client_logo/national%20parlimant.jpg" alt="Parliament of Tanzania" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="TCRA">
-            <img src="client_logo/tcra.jpg" alt="TCRA" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="TRA">
-            <img src="client_logo/tra.png" alt="TRA" loading="eager" />
-          </div>
-          <div class="stripe-partner-item" title="UDOM">
-            <img src="client_logo/udom.png" alt="UDOM" loading="eager" />
-          </div>
+    <!-- Bottom Slider Navigation & Indicators -->
+    <footer class="hero-footer">
+      <div class="slider-indicators">
+        <span class="slide-number" id="slideIndex">01</span>
+        <div class="slide-progress-line">
+          <div class="progress-bar-inner"></div>
         </div>
-
-        <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
-        <div class="stripe-marquee-group" aria-hidden="true">
-          <div class="stripe-partner-item" title="Alhez Medical Supplies Limited">
-            <img src="client_logo/alhez_logo.jpeg" alt="Alhez Medical Supplies" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="Beashe">
-            <img src="client_logo/beashe.png" alt="Beashe" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="BRELA">
-            <img src="client_logo/brelera.png" alt="BRELA" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="COSTECH">
-            <img src="client_logo/costech.jpg" alt="COSTECH" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="e-Government Authority">
-            <img src="client_logo/ega.png" alt="eGA" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="ICT Commission">
-            <img src="client_logo/ict%20commisoni.jpg" alt="ICT Commission" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="Jobarn">
-            <img src="client_logo/jobarn%20logo.jpeg" alt="Jobarn" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="Parliament of Tanzania">
-            <img src="client_logo/national%20parlimant.jpg" alt="Parliament of Tanzania" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="TCRA">
-            <img src="client_logo/tcra.jpg" alt="TCRA" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="TRA">
-            <img src="client_logo/tra.png" alt="TRA" loading="lazy" />
-          </div>
-          <div class="stripe-partner-item" title="UDOM">
-            <img src="client_logo/udom.png" alt="UDOM" loading="lazy" />
-          </div>
-        </div>
-
+        <button class="slide-dot active" type="button" data-slide="01" aria-label="Show banner 1" aria-current="true"></button>
+        <button class="slide-dot" type="button" data-slide="02" aria-label="Show banner 2"></button>
+        <button class="slide-dot" type="button" data-slide="03" aria-label="Show banner 3"></button>
       </div>
-    </div>
+    </footer>
 
   </section>
 
@@ -438,6 +356,50 @@
   </section>
 
   <!-- ========================================================
+       SECTION 6: WHO WE WORK WITH (PARTNERS & CLIENTS)
+       ======================================================== -->
+  <section id="partners" class="partners-section" aria-labelledby="partners-heading">
+    <div class="partners-container">
+      <h2 id="partners-heading">Who We Work With</h2>
+      <ul class="partners-grid" aria-label="Our partners">
+        <li class="partners-logo">
+          <img src="client_logo/alhez_logo.jpeg" alt="Alhez Medical Supplies Limited" width="1280" height="328" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/beashe.png" alt="Beashe" width="717" height="220" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/brelera.png" alt="Business Registrations and Licensing Agency (BRELA)" width="738" height="258" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/costech.jpg" alt="Tanzania Commission for Science and Technology (COSTECH)" width="447" height="447" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/ega.png" alt="e-Government Authority (eGA)" width="246" height="131" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/ict%20commisoni.jpg" alt="ICT Commission" width="225" height="225" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/jobarn%20logo.jpeg" alt="Jobarn" width="1181" height="1181" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/national%20parlimant.jpg" alt="Parliament of Tanzania" width="251" height="291" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/tcra.jpg" alt="Tanzania Communications Regulatory Authority (TCRA)" width="240" height="192" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/tra.png" alt="Tanzania Revenue Authority (TRA)" width="208" height="242" loading="lazy" decoding="async" />
+        </li>
+        <li class="partners-logo">
+          <img src="client_logo/udom.png" alt="University of Dodoma" width="447" height="447" loading="lazy" decoding="async" />
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================================================
        SECTION 7: COMPLETE COMPREHENSIVE FOOTER
        ======================================================== -->
   <footer id="footer" class="site-footer">
@@ -499,7 +461,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Dedicated jQuery & Custom JS File -->
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=blackhero1"></script>
 
 </body>
 </html>
