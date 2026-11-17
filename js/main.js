@@ -93,8 +93,9 @@ $(document).ready(function () {
     }
   });
 
-  // Auto-advance slides every 8 seconds (deliberate, steady pacing)
+  // Auto-advance slides only if slide-dot indicators exist (legacy support)
   function startAutoSlide() {
+    if (!$('.slide-dot').length) return;
     slideTimer = setInterval(function () {
       let nextIndex = (currentSlideIndex + 1) % slides.length;
       goToSlide(nextIndex);
@@ -106,7 +107,7 @@ $(document).ready(function () {
     startAutoSlide();
   }
 
-  if ($('.hero-container').length) startAutoSlide();
+  if ($('.slide-dot').length) startAutoSlide();
 
   // ------------------------------------------------------------------
   // 2. Fullscreen Menu Overlay Toggle

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aza Group | Enterprise Software &amp; Digital Transformation Tanzania</title>
-  <meta name="description" content="Aza Group is a premier Tanzanian technology company building practical digital products, enterprise accounting software (Aza Akaunting), custom development, data analytics, and secure networking." />
-  <meta name="keywords" content="Aza Group, Aza Akaunting, Fastnetstays, technology company Tanzania, software development Dar es Salaam, IT services Tanzania, digital transformation, networking cabling, cybersecurity Tanzania" />
+  <title>Aza Group | Sovereign Digital Products &amp; Enterprise Technology Tanzania</title>
+  <meta name="description" content="Aza Group is a leading Tanzanian technology company building sovereign digital products, enterprise accounting software (Aza Akaunting), custom development, analytics, and infrastructure." />
+  <meta name="keywords" content="Aza Group, Aza Group Tanzania, Aza Akaunting, Fastnetstays, Aza Pay, enterprise software Dar es Salaam, IT company Tanzania, digital transformation, network cabling, cybersecurity Tanzania" />
   <meta name="author" content="Aza Group Limited" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
@@ -16,22 +16,22 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://azagroup.co.tz/" />
-  <meta property="og:title" content="Aza Group | Enterprise Software &amp; Digital Transformation Tanzania" />
-  <meta property="og:description" content="Tanzanian technology company building digital products and providing software, data science, networking, and cybersecurity services." />
+  <meta property="og:title" content="Aza Group | Sovereign Digital Products &amp; Enterprise Technology Tanzania" />
+  <meta property="og:description" content="Aza Group builds sovereign digital products, custom enterprise software, and infrastructure that keep your credibility intact." />
   <meta property="og:image" content="https://azagroup.co.tz/assert/banner/aza_banner_akaunting.jpg" />
   <meta property="og:image:width" content="2048" />
   <meta property="og:image:height" content="1366" />
-  <meta property="og:image:alt" content="Aza Group - Closing the digital divide in Tanzania" />
+  <meta property="og:image:alt" content="Aza Group - Sovereign digital products and technology infrastructure in Tanzania" />
   <meta property="og:locale" content="en_TZ" />
-  <meta property="og:site_name" content="Aza Group" />
+  <meta property="og:site_name" content="Aza Group Limited" />
 
   <!-- Twitter Meta -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://azagroup.co.tz/" />
-  <meta name="twitter:title" content="Aza Group | Enterprise Software &amp; Digital Transformation Tanzania" />
-  <meta name="twitter:description" content="Tanzanian technology company building digital products and providing software, data science, networking, and cybersecurity services." />
+  <meta name="twitter:title" content="Aza Group | Sovereign Digital Products &amp; Enterprise Technology Tanzania" />
+  <meta name="twitter:description" content="Aza Group builds sovereign digital products, custom enterprise software, and infrastructure that keep your credibility intact." />
   <meta name="twitter:image" content="https://azagroup.co.tz/assert/banner/aza_banner_akaunting.jpg" />
-  <meta name="twitter:image:alt" content="Aza Group - Closing the digital divide in Tanzania" />
+  <meta name="twitter:image:alt" content="Aza Group - Sovereign digital products and technology infrastructure in Tanzania" />
 
   <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
   <script type="application/ld+json">
@@ -120,7 +120,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <!-- Dedicated Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=30" />
+  <link rel="stylesheet" href="css/style.css?v=nobannerclean1" />
+  <!-- Apple Design System for Hero & Polished Interactions -->
+  <link rel="stylesheet" href="css/apple-style.css?v=nobannerclean1" />
 </head>
 <body>
 
@@ -147,57 +149,63 @@
           <p class="text-uppercase tracking-wider text-white opacity-75 small fw-bold">Headquarters</p>
           <h5 class="fw-semibold text-white mb-2">Dar es Salaam, Tanzania</h5>
           <p class="text-white opacity-75 small mb-4">Skycity Mall, opposite Mlimani City, University Road</p>
-          <a class="link-light mb-2" href="mailto:info@azagroup.co.tz">info@azagroup.co.tz</a>
-          <a class="link-light" href="tel:+255624105850">0624 105 850</a>
+          <a class="link-light mb-2 text-decoration-none d-inline-flex align-items-center gap-2" href="mailto:info@azagroup.co.tz">
+            <i class="bi bi-envelope text-info"></i>
+            <span>info@azagroup.co.tz</span>
+          </a>
+          <a class="link-light text-decoration-none d-inline-flex align-items-center gap-2" href="tel:+255624105850">
+            <i class="bi bi-telephone text-info"></i>
+            <span>+255 624 105 850</span>
+          </a>
         </div>
       </div>
     </div>
   </dialog>
 
   <!-- ========================================================
-       HERO BANNER SECTION
+       APPLE-STYLE STICKY NAVIGATION BAR (STANDALONE TOP HEADER)
        ======================================================== -->
-  <section class="hero-container">
+  <header class="hero-header apple-nav-bar d-flex justify-content-between align-items-center">
+    <!-- Logo + Brand Name -->
+    <a href="index.html" class="brand-logo" aria-label="Aza Group home">
+      <img src="assert/banner/aza_logo_hero.png?v=cyanmark1" alt="Aza Group" class="hero-brand-image" width="310" height="288" />
+      <span class="brand-company-name">Aza Group Limited</span>
+    </a>
 
-    <!-- Header Navigation -->
-    <header class="hero-header d-flex justify-content-between align-items-center">
-      <!-- Logo -->
-      <a href="index.html" class="brand-logo" aria-label="Aza Group home">
-        <img src="assert/banner/aza_logo_hero.png" alt="Aza Group" class="hero-brand-image" width="104" height="62" />
-      </a>
+    <!-- Right Header Action: Maintained Hamburger Menu -->
+    <div class="nav-actions">
+      <button class="menu-hamburger" id="hamburgerBtn" type="button" aria-label="Open Menu" aria-controls="menuOverlay" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-      <!-- Right Header Actions (Clean Hamburger Menu Only) -->
-      <div class="nav-actions">
-        <!-- 2-bar Hamburger Menu Button -->
-        <button class="menu-hamburger" id="hamburgerBtn" type="button" aria-label="Open Menu" aria-controls="menuOverlay" aria-expanded="false">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
+  <!-- ========================================================
+       APPLE-STYLE HERO (PURE, CLEAN, NO BANNER IMAGE)
+       ======================================================== -->
+  <section class="hero-container apple-hero-section">
 
-    <!-- Main Hero Title Statement -->
-    <main class="hero-content">
-      <h1 class="hero-title">
-        <span class="line-1">CLOSING</span>
-        <span class="line-2">THE DIGITAL</span>
-        <span class="line-3">DIVIDE</span>
+    <!-- Main Clean Apple Hero Centerpiece -->
+    <main class="hero-content apple-hero-stage">
+      <h1 class="hero-title apple-hero-title">
+        Trust is <span class="highlight-cyan">expensive.</span><br />Breaking it is free.
       </h1>
-      <p class="hero-subtitle">Engineering sovereign digital infrastructure, fintech, and enterprise software for Tanzania.</p>
-      <a href="#products" class="explore-btn">Explore our products</a>
+      <p class="hero-subtitle apple-hero-subtitle">
+        Sovereign digital products and technology infrastructure. Built to work every time.
+      </p>
+      <div class="apple-cta-links">
+        <a href="#what-we-do" class="apple-text-link">Learn more <i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+        <a href="contact.html" class="apple-text-link">Contact us <i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+      </div>
     </main>
 
-    <!-- Bottom Slider Navigation -->
-    <footer class="hero-footer">
-      <div class="slider-indicators">
-        <span class="slide-number" id="slideIndex">01</span>
-        <div class="slide-progress-line">
-          <div class="progress-bar-inner"></div>
-        </div>
-        <button class="slide-dot active" type="button" data-slide="01" aria-label="Show banner 1" aria-current="true"></button>
-        <button class="slide-dot" type="button" data-slide="02" aria-label="Show banner 2"></button>
-        <button class="slide-dot" type="button" data-slide="03" aria-label="Show banner 3"></button>
-      </div>
+    <!-- Clean Apple-style Scroll Indicator -->
+    <footer class="hero-footer apple-hero-footer">
+      <a href="#who-we-are" class="apple-scroll-cue" aria-label="Scroll down">
+        <span class="apple-scroll-text">Scroll to explore</span>
+        <i class="bi bi-chevron-down" aria-hidden="true"></i>
+      </a>
     </footer>
 
   </section>

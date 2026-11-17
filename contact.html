@@ -73,7 +73,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <!-- Dedicated Custom CSS -->
-  <link rel="stylesheet" href="css/style.css?v=30" />
+  <link rel="stylesheet" href="css/style.css?v=nobannerclean1" />
+  <!-- Apple Design System for Hero & Polished Interactions -->
+  <link rel="stylesheet" href="css/apple-style.css?v=nobannerclean1" />
 </head>
 <body class="contact-page">
 
@@ -100,42 +102,50 @@
           <p class="text-uppercase tracking-wider text-white opacity-75 small fw-bold">Headquarters</p>
           <h5 class="fw-semibold text-white mb-2">Dar es Salaam, Tanzania</h5>
           <p class="text-white opacity-75 small mb-4">Skycity Mall, opposite Mlimani City, University Road</p>
-          <a class="link-light mb-2" href="mailto:info@azagroup.co.tz">info@azagroup.co.tz</a>
-          <a class="link-light" href="tel:+255624105850">0624 105 850</a>
+          <a class="link-light mb-2 text-decoration-none d-inline-flex align-items-center gap-2" href="mailto:info@azagroup.co.tz">
+            <i class="bi bi-envelope text-info"></i>
+            <span>info@azagroup.co.tz</span>
+          </a>
+          <a class="link-light text-decoration-none d-inline-flex align-items-center gap-2" href="tel:+255624105850">
+            <i class="bi bi-telephone text-info"></i>
+            <span>+255 624 105 850</span>
+          </a>
         </div>
       </div>
     </div>
   </dialog>
 
   <!-- ========================================================
-       HERO BANNER
+       APPLE-STYLE STICKY NAVIGATION BAR (STANDALONE TOP HEADER)
        ======================================================== -->
-  <header class="contact-hero-banner">
-    <div class="hero-header d-flex justify-content-between align-items-center">
-      <a href="index.html" class="brand-logo" aria-label="Aza Group home">
-        <img src="assert/banner/aza_logo_hero.png" alt="Aza Group" class="hero-brand-image" width="104" height="62" />
-      </a>
+  <header class="hero-header apple-nav-bar d-flex justify-content-between align-items-center">
+    <a href="index.html" class="brand-logo" aria-label="Aza Group home">
+      <img src="assert/banner/aza_logo_hero.png?v=cyanmark1" alt="Aza Group" class="hero-brand-image" width="310" height="288" />
+      <span class="brand-company-name">Aza Group Limited</span>
+    </a>
 
-      <!-- Right Header Actions (Clean Hamburger Menu Only) -->
-      <div class="nav-actions">
-        <button class="menu-hamburger" id="hamburgerBtn" type="button" aria-label="Open Menu" aria-controls="menuOverlay" aria-expanded="false">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-
-    <div class="contact-hero-content">
-      <h1 class="hero-title">
-        <span class="line-1">GET IN</span>
-        <span class="line-2">TOUCH</span>
-        <span class="line-3">WITH US</span>
-      </h1>
-      <p class="contact-hero-sub">
-        Tell us what you're working on. We're here to help you scope a project or request a quote.
-      </p>
+    <!-- Right Header Actions (Clean Hamburger Menu Maintained) -->
+    <div class="nav-actions">
+      <button class="menu-hamburger" id="hamburgerBtn" type="button" aria-label="Open Menu" aria-controls="menuOverlay" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <!-- ========================================================
+       APPLE-STYLE HERO BANNER (CLEAN, NO IMAGE)
+       ======================================================== -->
+  <section class="contact-hero-banner apple-contact-hero">
+    <div class="contact-hero-content apple-hero-stage">
+      <h1 class="hero-title apple-hero-title">
+        Let’s build something extraordinary.
+      </h1>
+      <p class="contact-hero-sub apple-hero-subtitle">
+        Tell us what you're working on. We're here to help you scope a project, consult on architecture, or request a detailed quote.
+      </p>
+    </div>
+  </section>
 
   <!-- ========================================================
        CLEAN BORDERLESS FORM SECTION (WHITE BACKGROUND)

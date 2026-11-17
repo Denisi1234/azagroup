@@ -4,10 +4,12 @@
 User-agent: *
 Allow: /
 
-# Do not index server-side or metadata files
+# Do not index server-side scripts or repository source files
 Disallow: /send-enquiry.php
 Disallow: /README.md
 Disallow: /.cpanel.yml
+Disallow: /.git/
 
-# Sitemap location
+# Host & Sitemap location
+Host: https://azagroup.co.tz
 Sitemap: https://azagroup.co.tz/sitemap.xml
