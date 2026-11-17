@@ -47,23 +47,24 @@ body {
   right: 0 !important;
   z-index: 9999 !important;
   width: 100% !important;
-  height: 56px !important;
+  height: 72px !important;
   padding: 0 clamp(1.2rem, 5vw, 4rem) !important;
-  background: rgba(255, 255, 255, 0.88) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
   backdrop-filter: saturate(180%) blur(20px) !important;
   -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
-  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
   box-shadow: none !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
   box-sizing: border-box !important;
+  transition: height 0.25s ease !important;
 }
 
 .brand-logo {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 14px !important;
   text-decoration: none !important;
   height: 100% !important;
 }
@@ -71,18 +72,18 @@ body {
 .brand-logo .hero-brand-image {
   display: block !important;
   width: auto !important;
-  height: 40px !important;
-  max-height: 40px !important;
+  height: 52px !important;
+  max-height: 52px !important;
   object-fit: contain !important;
-  transition: transform 0.2s ease !important;
+  transition: transform 0.22s ease !important;
 }
 
 .brand-company-name {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif !important;
-  font-size: 1.15rem !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.015em !important;
-  color: #1d1d1f !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Outfit", sans-serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: #0a2540 !important;
   white-space: nowrap !important;
 }
 
@@ -91,7 +92,7 @@ body {
 }
 
 .brand-logo:hover .hero-brand-image {
-  transform: scale(1.04) !important;
+  transform: scale(1.05) !important;
 }
 
 /* Triple 3-Bar Hamburger Menu */
@@ -102,11 +103,11 @@ body {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-  gap: 5px !important;
-  width: 38px !important;
-  height: 32px !important;
-  padding: 4px !important;
-  border-radius: 6px !important;
+  gap: 6px !important;
+  width: 44px !important;
+  height: 38px !important;
+  padding: 6px !important;
+  border-radius: 8px !important;
   transition: transform 0.2s ease, opacity 0.2s ease !important;
 }
 
@@ -117,7 +118,7 @@ body {
 .menu-hamburger span {
   display: block !important;
   width: 100% !important;
-  height: 2.4px !important;
+  height: 2.8px !important;
   background-color: #0a2540 !important;
   border-radius: 9999px !important;
   transition: all 0.22s ease !important;
@@ -196,12 +197,12 @@ body {
 .stripe-hero-section {
   position: relative !important;
   width: 100% !important;
-  height: calc(100vh - 56px) !important;
-  height: calc(100dvh - 56px) !important;
-  min-height: calc(100vh - 56px) !important;
-  min-height: calc(100dvh - 56px) !important;
-  max-height: calc(100vh - 56px) !important;
-  max-height: calc(100dvh - 56px) !important;
+  height: calc(100vh - 72px) !important;
+  height: calc(100dvh - 72px) !important;
+  min-height: calc(100vh - 72px) !important;
+  min-height: calc(100dvh - 72px) !important;
+  max-height: calc(100vh - 72px) !important;
+  max-height: calc(100dvh - 72px) !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -494,7 +495,7 @@ body {
   width: 100% !important;
   background: #ffffff !important;
   border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
-  padding: clamp(14px, 1.8vh, 22px) 0 !important;
+  padding: clamp(16px, 2.2vh, 28px) 0 !important;
   overflow: hidden !important;
   user-select: none !important;
   box-sizing: border-box !important;
@@ -539,8 +540,8 @@ body {
 .stripe-marquee-group {
   display: flex !important;
   align-items: center !important;
-  gap: clamp(48px, 6vw, 92px) !important;
-  padding-right: clamp(48px, 6vw, 92px) !important;
+  gap: clamp(56px, 7vw, 110px) !important;
+  padding-right: clamp(56px, 7vw, 110px) !important;
   flex-shrink: 0 !important;
 }
 
@@ -548,8 +549,8 @@ body {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  height: 56px !important;
-  min-width: 110px !important;
+  height: 72px !important;
+  min-width: 140px !important;
   flex-shrink: 0 !important;
   opacity: 0.95 !important;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
@@ -561,8 +562,8 @@ body {
 }
 
 .stripe-partner-item img {
-  max-height: 48px !important;
-  max-width: 160px !important;
+  max-height: 64px !important;
+  max-width: 200px !important;
   width: auto !important;
   height: auto !important;
   object-fit: contain !important;
@@ -581,29 +582,37 @@ body {
 
 /* Responsive adjustment for Mobile & Tablet screens */
 @media (max-width: 900px) {
-  .stripe-title-row-2 {
-    display: none !important;
-  }
-
   .hero-container,
   .stripe-hero-section {
-    min-height: calc(100vh - 56px) !important;
-    min-height: calc(100dvh - 56px) !important;
-    height: calc(100vh - 56px) !important;
-    height: calc(100dvh - 56px) !important;
-    max-height: calc(100vh - 56px) !important;
-    max-height: calc(100dvh - 56px) !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    position: relative !important;
+    height: calc(100vh - 72px) !important;
+    height: calc(100dvh - 72px) !important;
+    min-height: calc(100vh - 72px) !important;
+    min-height: calc(100dvh - 72px) !important;
+    max-height: calc(100vh - 72px) !important;
+    max-height: calc(100dvh - 72px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
   }
 
   .stripe-hero-inner {
     width: 100% !important;
-    padding: 0 1.25rem !important;
-    flex-grow: 1 !important;
+    padding: 0 1.5rem !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: flex-start !important;
+    box-sizing: border-box !important;
+  }
+
+  .stripe-hero-content {
+    max-width: 100% !important;
   }
 
   .stripe-hero-title {
@@ -611,10 +620,23 @@ body {
   }
 
   .stripe-title-row-1 {
-    font-size: clamp(2rem, 7.8vw, 2.75rem) !important;
-    line-height: 1.12 !important;
+    font-size: clamp(2rem, 7.5vw, 2.75rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
     letter-spacing: -0.035em !important;
-    margin-bottom: 0 !important;
+    color: #0a2540 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .stripe-title-row-2 {
+    display: block !important;
+    font-size: clamp(0.98rem, 3.5vw, 1.15rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.015em !important;
+    color: #425466 !important;
+    margin-top: 0 !important;
+    max-width: 100% !important;
   }
   
   .stripe-glow-canvas {
@@ -648,8 +670,11 @@ body {
   }
 
   .stripe-partners-marquee-wrapper {
-    padding: 10px 0 !important;
+    padding: clamp(12px, 1.8vh, 18px) 0 !important;
+    margin-top: auto !important;
     flex-shrink: 0 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-sizing: border-box !important;
   }
 
   .stripe-partners-marquee-track {
@@ -657,18 +682,18 @@ body {
   }
 
   .stripe-marquee-group {
-    gap: 36px !important;
-    padding-right: 36px !important;
+    gap: 48px !important;
+    padding-right: 48px !important;
   }
 
   .stripe-partner-item {
-    height: 34px !important;
-    min-width: 70px !important;
+    height: 48px !important;
+    min-width: 95px !important;
   }
 
   .stripe-partner-item img {
-    max-height: 28px !important;
-    max-width: 95px !important;
+    max-height: 42px !important;
+    max-width: 135px !important;
   }
 }
 
@@ -1362,16 +1387,27 @@ body {
   .hero-header,
   .apple-nav-bar {
     padding: 0 1.25rem !important;
-    height: 48px !important;
+    height: 72px !important;
   }
   
+  .brand-logo {
+    gap: 12px !important;
+  }
+
   .brand-company-name {
-    font-size: 0.9rem !important;
-    font-weight: 600 !important;
+    font-size: 1.18rem !important;
+    font-weight: 700 !important;
   }
   
   .brand-logo .hero-brand-image {
-    height: 22px !important;
+    height: 52px !important;
+    max-height: 52px !important;
+  }
+
+  .menu-hamburger {
+    width: 42px !important;
+    height: 36px !important;
+    gap: 6px !important;
   }
 
   .apple-hero-section {
@@ -1458,6 +1494,12 @@ body {
 
 @media (max-width: 480px) {
   .brand-company-name {
-    display: none !important; /* Hide long text on tiny mobile viewports, keep logo mark clean */
+    font-size: 1.05rem !important;
+    display: inline-block !important; /* Retain company name with large logo */
+  }
+
+  .brand-logo .hero-brand-image {
+    height: 48px !important;
+    max-height: 48px !important;
   }
 }
